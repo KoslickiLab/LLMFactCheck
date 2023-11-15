@@ -26,7 +26,7 @@ Before you begin, make sure you have the following installed: - [Miniconda](http
 
 
 ### Essential for MacOS Users 🍏
-To ensure a seamless experience, it's crucial to have Xcode installed on your MacOS. Xcode equips you with fundamental development tools and resources. Get [Xcode here](https://developer.apple.com/xcode/) to optimize your development environment and ensure smooth operation! ✨
+To ensure a seamless experience, it's crucial to have GCC installed on your MacOS. Get [GCC here](See https://discussions.apple.com/thread/8336714) to optimize your environment and ensure smooth operation! ✨
 
 
 ## Installation
