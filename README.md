@@ -1,78 +1,96 @@
 <div align="center">
   <img src="img/photo_2023-11-07_12-49-09.jpg" alt="Project Image">
-<p>Your one-stop solution for validating predicates in various sources.</p>
+<p>
+
+[![Python Version](https://img.shields.io/badge/Python-3.10-E6E6FA)](https://www.python.org/downloads/release/python-3100/)
+[![Pandas Version](https://img.shields.io/badge/Pandas-Latest-E6E6FA)](https://pandas.pydata.org/)
+[![NumPy Version](https://img.shields.io/badge/NumPy-Latest-E6E6FA)](https://numpy.org/)
+[![LLama-CPP Version](https://img.shields.io/badge/LLama--CPP-0.1.78-E6E6FA)](https://github.com/llama-ai/llama-cpp)
+[![Hugging Face Hub](https://img.shields.io/badge/Hugging%20Face%20Hub-0.0.12-E6E6FA)](https://huggingface.co/)
+
+
+</p>
+
+<div style="background-color:#E6E6FA; padding: 2px; text-align: center;">
+  <h5 style="color: black; font-size: 16px;">YOUR ONE-STOP SOLUTION FOR <strong>VALIDATING PREDICATES</strong> IN VARIOUS SOURCES.</h5>
+</div>
 </div>
 
 ## Project Description
 
 The "LLMFactCheck" is a powerful tool designed to validate predicates in different sources, ensuring the accuracy of references and enhancing the quality of your research.
 
+## Prerequisites
+
+Before you begin, make sure you have the following installed: - [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+
+
+### Essential for MacOS Users 🍏
+To ensure a seamless experience, it's crucial to have Xcode installed on your MacOS. Xcode equips you with fundamental development tools and resources. Get [Xcode here](https://developer.apple.com/xcode/) to optimize your development environment and ensure smooth operation! ✨
+
 
 ## Installation
 
-To run the LLMFactCheck tool, you'll need to set up the necessary environment and install the required packages.
+### Conda Environment
 
-### Prerequisites
+To run the LLMFactCheck tool, follow these steps to set up the necessary Conda environment. Follow these steps: 🛠️
 
-Before you begin, ensure you have Python 3.7 or later installed. You'll also need to create a virtual environment to manage dependencies.
+1. Make sure you have completed the Prerequisites. 
 
-```shell
-# Create a virtual environment (venv)
-python3 -m venv venv
+2. Clone the repository:
 
-# Activate the virtual environment
-source venv/bin/activate
-```
+   ```bash
+   git clone https://github.com/KoslickiLab/LLMFactCheck.git
+   cd LLMFactCheck
+   
+3. Setup the environment for LLMFactCheck by running the setup script:
 
-# Install Dependencies
-To install the project dependencies, use the following command:
+   ```bash
+   bash setup.sh
+   
+4. Activate the Conda environment:
 
-```shell
-# Copy code
-pip install -r requirements.txt
-```
+   ```bash
+    conda activate myLLMFactCheck
 
-# Usage
+# Usage (Run LLMFactCheck) 💡 
 After completing the installation, you can run the LLMFactCheck tool using the following command:
 
-```shell
-# Copy code
-# Run LLMFactCheck for Semmed database
-cd src
-python3 main.py --predication_file data/semmed_predicate.csv --sentence_file data/semmed_sentence.csv
+   ```bash
+   # Run LLMFactCheck for Semmed database
+   python3 main.py --predication_file semmed_predicate.csv --sentence_file semmed_sentence.csv
+   
 ```
 
-
-# Project Structure
+## Project Structure
 This part of the project follows a well-organized structure for easy navigation and management. 
 Here's a quick overview:
 
-**src:** Contains the main code and data for working with the Semmed database.
-  
-  - `main.py`: 🚀 Main file that invokes the core logic.
+- **main.py:** Main file that invokes the core logic.
 
+- **src:** Contains the main code for working with the Semmed database.
   - **util:**
     - `result_writing.py`: File for writing results.
     - `data_processing.py`: File for data processing.
     - `llama_interaction.py`: File for interacting with the Llama model.
+    - `progress.py`: File to track the progress of predicate validation.    
 
-  - **result:** Results of Semmed predicate validation will be stored here.
-    - `semmed_result_console_app.csv`
+- **data:** Your data for validation.
+  - `semmed_predicate.csv`
+  - `semmed_sentence.csv`
 
-  - **check:** Contains data you are checking and code for checking results.
-    - **data:**
-      - `data_file.csv`: Your data for validation.
-    - `check_results.py`: File for checking results.
-    
-  - **previous_version:** Previous issues
-    - `lcpp_llm_predicate__sentence_result.ipynb`
-  
+- **result:** Results of Semmed predicate validation will be stored here.
+  - `semmed_result_console_app.csv`
+
+
+- **check:** Contains data you are checking and code for checking results.
+
 
 ## How It Works
 
-1. **Run the Tool**: Execute the main script from the "src" folder, and watch as the tool works its magic.
+1. **Run the Tool**: Execute the main script, and watch as the tool works its magic.
 
-2. **View Results**: The results of the predicate validation process will be stored in the "results". You can review them to identify any issues with the references.
+2. **View Results**: The results of the predicate validation process will be stored in the "result". You can review them to identify any issues with the references.
 
 3. **Celebrate**: You've successfully checked predicates with LLMFactCheck! 🎉
 
