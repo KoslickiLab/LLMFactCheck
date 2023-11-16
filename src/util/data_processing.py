@@ -30,14 +30,15 @@ def read_data_from_files(predication_file: str, sentence_file: str) -> Tuple[pd.
     return predication_data, sentence_data
 
 
-def process_predicate_row(row: pd.Series) -> Tuple[int, str]:
+def process_predicate_row(row: pd.Series) -> Tuple[int, int, str]:
     sentence_id = row["SENTENCE_ID"]
+    predicate_id = row["PREDICATION_ID"]
     predicate_raw = row["PREDICATE"].strip('""_').replace('_', ' ').lower()
     predicate = "is a" if predicate_raw == "isa" else predicate_raw
     subject_name = row["SUBJECT_NAME"].strip('""_')
     object_name = row["OBJECT_NAME"].strip('""_')
     full_predicate = f"{subject_name} {predicate} {object_name}"
-    return sentence_id, full_predicate
+    return sentence_id, predicate_id, full_predicate
 
 
 def initialize_writers(result_file: str, progress_file_path: str) -> Tuple[csv.writer, csv.writer, TextIO, TextIO]:
@@ -75,7 +76,7 @@ def load_state(progress_file_path: str):
 def process_sentence(lcpp_llm: Llama, sentence_id: int, sentence: str, predicates_for_sentence: list, progress: set,
                      console_results_writer: csv.writer, progress_writer: csv.writer) -> None:
     global is_correct
-    for predicate_id, predicate_text in predicates_for_sentence:
+    for sentence_id, predicate_id, predicate_text in predicates_for_sentence:
         if (sentence_id, predicate_id) not in progress:
             prompt = f"Is the triple '{predicate_text}' supported by the sentence: '{sentence}'"
 
@@ -126,12 +127,12 @@ def process_data_and_fact_check(lcpp_llm: Llama, predication_data: pd.DataFrame,
             ["Predicate ID", "Predicate", "Sentence ID", "Sentence", "Is Correct", "Question", "Answer"])
 
     for index, row in predication_data.iterrows():
-        sentence_id, full_predicate = process_predicate_row(row)
+        sentence_id,  predicate_id, full_predicate = process_predicate_row(row)
 
         if sentence_id not in sentence_dict:
             sentence_dict[sentence_id] = []
 
-        sentence_dict[sentence_id].append((index, full_predicate))
+        sentence_dict[sentence_id].append((sentence_id, predicate_id, full_predicate))
 
     for sentence_id, predicates_for_sentence in sentence_dict.items():
         if str(sentence_id) in sentence_data['SENTENCE_ID'].values:

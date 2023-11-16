@@ -83,7 +83,6 @@ Here's a quick overview:
   - `semmed_result_console_app.csv`
 
 
-- **check:** Contains data you are checking and code for checking results.
 
 
 ## How It Works
