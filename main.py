@@ -4,8 +4,8 @@ import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 import argparse
-from src.util.data_processing import read_data_from_files, process_data_and_fact_check
-from src.util.llama_interaction import load_llama_model
+from src.data_processing import read_data_from_files, process_data_and_fact_check
+from src.llama_interaction import load_llama_model
 
 
 result_folder = "result"

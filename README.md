@@ -58,7 +58,7 @@ After completing the installation, you can run the LLMFactCheck tool using the f
 
    ```bash
    # Run LLMFactCheck for Semmed database
-   python3 main.py --predication_file semmed_predicate.csv --sentence_file semmed_sentence.csv
+   python3 main.py --predication_file semmed_predication_data.csv --sentence_file semmed_sentence_data.csv
    
 ```
 
@@ -68,23 +68,25 @@ Here's a quick overview:
 
 - **main.py:** Main file that invokes the core logic.
 
-- **src:** Contains the main code for working with the Semmed database.
-  - **util:**
-    - `result_writing.py`: File for writing results.
-    - `data_processing.py`: File for data processing.
-    - `llama_interaction.py`: File for interacting with the Llama model.
-    - `progress.py`: File to track the progress of predicate validation.    
-
 - **data:** Your data for validation.
-  - `semmed_predicate.csv`
-  - `semmed_sentence.csv`
+  - `ssemmed_predication_data.csv`
+  - `ssemmed_sentence_data.csv`
 
 - **result:** Results of Semmed predicate validation will be stored here.
   - `semmed_result_console_app.csv`
 
+- **src:** Contains the main code for working with llama model and the Semmed database .
+    - `result_writing.py`: File for writing results.
+    - `data_processing.py`: File for data processing.
+    - `llama_interaction.py`: File for interacting with the Llama model.
+    - `progress.py`: File to track the progress of predicate validation.  
 
+- **util:** Testing model and calculating the model's accuracy. How to use it - you can find it in the README file of the folder.
+    - `model_accuracy`: This directory is used to calculate the model's accuracy. It uses human-annotated SemMedDB data to verify the model's predicate accuracy.
+    - `chembl`: This directory contains files for testing the model's performance on the ChEMBL database. It includes the chembl_predicates.py file, which generates full predicates.
 
-
+- **test:** This directory contains tests for the project. Tests help verify if the code functions correctly and identify any errors or issues. How to use it - you can find it in the README file of the folder.
+    
 ## How It Works
 
 1. **Run the Tool**: Execute the main script, and watch as the tool works its magic.

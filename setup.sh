@@ -3,7 +3,7 @@
 
 # Check if the LLMFactCheck environment exists
 ENV_NAME="myLLMFactCheck"
-check=$(conda env list | awk '{print $1}' | grep -w $ENV_NAME | wc -l)
+tests=$(conda env list | awk '{print $1}' | grep -w $ENV_NAME | wc -l)
 
 if [ $check -eq 1 ]; then
     echo "The environment '$ENV_NAME' already exists. Please activate it by running 'conda activate $ENV_NAME'."

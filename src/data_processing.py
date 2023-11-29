@@ -5,28 +5,22 @@ from typing import Tuple, TextIO
 
 import pandas as pd
 from llama_cpp import Llama
-from src.util.llama_interaction import get_llama_result
-from src.util.result_writing import write_result_to_csv, write_progress
-
+from src.llama_interaction import get_llama_result
+from src.result_writing import write_result_to_csv, write_progress
 
 def read_data_from_files(predication_file: str, sentence_file: str) -> Tuple[pd.DataFrame, pd.DataFrame]:
-    predication_data = pd.read_csv(os.path.join('data', predication_file), delimiter='","', quotechar='"', header=None, engine='python')
+    predication_data = pd.read_csv(os.path.join('data', predication_file), delimiter=',', header=None, engine='python')
     predication_data.columns = [
         "PREDICATION_ID", "SENTENCE_ID", "PMID", "PREDICATE", "SUBJECT_CUI", "SUBJECT_NAME",
-        "SUBJECT_SEMTYPE", "SUBJECT_NOVELTY", "OBJECT_CUI", "OBJECT_NAME", "OBJECT_SEMTYPE", "OBJECT_NOVELTY"
+        "SUBJECT_SEMTYPE", "SUBJECT_NOVELTY", "OBJECT_CUI", "OBJECT_NAME", "OBJECT_SEMTYPE", "OBJECT_NOVELTY", "Column", "Column", "Column"
     ]
-    predication_data["PREDICATION_ID"] = predication_data["PREDICATION_ID"].str.strip('""')
-    predication_data["SENTENCE_ID"] = predication_data["SENTENCE_ID"].str.strip('""')
 
-    sentence_data = pd.read_csv(os.path.join('data', sentence_file), delimiter='\t', header=None, engine='python')
-    sentence_data = sentence_data[0].str.split('","', expand=True)
-    sentence_data = sentence_data.apply(lambda x: x.str.strip('"'))
+    sentence_data = pd.read_csv(os.path.join('data', sentence_file), delimiter=',', header=None, engine='python')
     sentence_data.columns = [
         "SENTENCE_ID", "PMID", "TYPE", "NUMBER", "SENT_START_INDEX", "SENTENCE",
-        "SECTION_HEADER", "NORMALIZED_SECTION_HEADER", "Column"
+        "SECTION_HEADER", "NORMALIZED_SECTION_HEADER", "Column", "Column"
     ]
-    sentence_data["SENTENCE_ID"] = sentence_data["SENTENCE_ID"].str.strip('""')
-
+    sentence_data["SENTENCE"] = sentence_data["SENTENCE"].str.strip('""')
     return predication_data, sentence_data
 
 
@@ -78,7 +72,7 @@ def process_sentence(lcpp_llm: Llama, sentence_id: int, sentence: str, predicate
     global is_correct
     for sentence_id, predicate_id, predicate_text in predicates_for_sentence:
         if (sentence_id, predicate_id) not in progress:
-            prompt = f"Is the triple '{predicate_text}' supported by the sentence: '{sentence}'"
+            prompt = f"'Is the triple '{predicate_text}' supported by the sentence: '{sentence}'?"
 
             result = get_llama_result(lcpp_llm, prompt)
             question = f"Is the triple '{predicate_text}' supported by the sentence: '{sentence}'?"
@@ -135,7 +129,7 @@ def process_data_and_fact_check(lcpp_llm: Llama, predication_data: pd.DataFrame,
         sentence_dict[sentence_id].append((sentence_id, predicate_id, full_predicate))
 
     for sentence_id, predicates_for_sentence in sentence_dict.items():
-        if str(sentence_id) in sentence_data['SENTENCE_ID'].values:
+        if sentence_id in sentence_data['SENTENCE_ID'].values:
             sentence = sentence_data[sentence_data['SENTENCE_ID'].astype(int) == int(sentence_id)]['SENTENCE'].values[0]
             process_sentence(
                 lcpp_llm, int(sentence_id), sentence, predicates_for_sentence,
