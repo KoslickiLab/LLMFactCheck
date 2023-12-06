@@ -12,13 +12,13 @@
 </p>
 
 <div style="background-color:#E6E6FA; padding: 2px; text-align: center;">
-  <h5 style="color: black; font-size: 16px;">YOUR ONE-STOP SOLUTION FOR <strong>VALIDATING PREDICATES</strong> IN VARIOUS SOURCES.</h5>
+  <h5 style="color: black; font-size: 16px;">YOUR ONE-STOP SOLUTION FOR <strong>VALIDATING TRIPLES</strong> IN VARIOUS SOURCES.</h5>
 </div>
 </div>
 
 ## Project Description
 
-The "LLMFactCheck" is a powerful tool designed to validate predicates in different sources, ensuring the accuracy of references and enhancing the quality of your research.
+The "LLMFactCheck" is a powerful tool designed to validate semantic triples (subject–predicate–object)  in different sources, ensuring the accuracy of references and enhancing the quality of your research.
 
 ## Prerequisites
 
