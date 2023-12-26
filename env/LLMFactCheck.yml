@@ -10,6 +10,7 @@ dependencies:
   - scikit-learn
   - matplotlib
   - pytest
+  - pytest-cov
   - pytest-mock
   - pip
   - pip:
