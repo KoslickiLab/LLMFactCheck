@@ -1,34 +1,42 @@
-import sys
 import os
-
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
 import argparse
-from src.data_processing import read_data_from_files, process_data_and_fact_check
-from src.llama_interaction import load_llama_model
+from config.openai_api_key import OPENAI_API_KEY
+from src.data_processing import read_data_from_files
+from src.load_model import load_model
+from src.processing import process_data
 
+os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 result_folder = "result"
-RESULT_FILE = os.path.abspath(os.path.join(result_folder, "semmed_result_console_app.csv"))
-PROGRESS_FILE = os.path.abspath(os.path.join(result_folder, "progress.csv"))
+progress_folder = "progress"
 
 
 def main() -> None:
-    parser: argparse.ArgumentParser = argparse.ArgumentParser(description="LLM Fact-Checking App")
-    parser.add_argument("--predication_file", required=True, help="Path to the semmeddb predicate file")
-    parser.add_argument("--sentence_file", required=True, help="Path to the semmeddb sentence file")
+    """
+    Main function to run the Fact-Checking App.
+    This function parses command-line arguments,
+    reads data from files, loads the language model, and initiates the data processing.
+    Returns:
+        None
+    """
+    parser = argparse.ArgumentParser(description="Fact-Checking App")
+    parser.add_argument("--model", required=True, choices=['llama', 'gpt_4_0', 'gpt_3_5_turbo'], help="Model to use")
+    parser.add_argument("--icl", action='store_true', help="Use In-Context Learning")
+    parser.add_argument("--triple_file", required=True, help="Path to the SemMedDB triple file")
+    parser.add_argument("--sentence_file", required=True, help="Path to the SemMedDB sentence file")
+    args = parser.parse_args()
 
-    args: argparse.Namespace = parser.parse_args()
+    triple_data, sentence_data = read_data_from_files(args.triple_file, args.sentence_file)
 
-    predication_file: str = args.predication_file
-    sentence_file: str = args.sentence_file
+    model_info = load_model(args.model, args.icl)
 
-    lcpp_llm = load_llama_model()
-    predication_data, sentence_data = read_data_from_files(predication_file, sentence_file)
+    icl_suffix = '_icl' if args.icl else ''
+    result_file_name = f"{args.model}{icl_suffix}_semmed_result.csv"
+    progress_file_name = f"{args.model}{icl_suffix}_progress.csv"
 
-    process_data_and_fact_check(
-        lcpp_llm, predication_data, sentence_data, RESULT_FILE, PROGRESS_FILE
-    )
+    process_data(model_info, args.model, args.icl, triple_data, sentence_data,
+                 os.path.join(result_folder, result_file_name),
+                 os.path.join(result_folder, progress_folder, progress_file_name))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,88 @@
+Predicate ID,Triple,Sentence ID
+10592832,Disease process of Human,18
+10592873,Virus causes Disease,18
+10593057,Lepus capensis location of Antibodies,23
+10593208,Binding Protein part of FHL1,26
+10593243,COMPLEMENT FACTOR H|CFH part of Borrelia burgdorferi,26
+10593287,Binding Protein part of Borrelia burgdorferi,26
+10593621,XS part of Borrelia burgdorferi,34
+10593815,XS produces homocysteine,39
+10593856,Bacteria interacts with Methionine,39
+10593932,Pheromone affects Gene Expression,40
+10594285,B.S.S. treats Adult,50
+10594435,host part of Vertebrates,53
+10594472,B.S.S. affects host,53
+10594689,Disease process of Farm Animals,57
+10594898,Therapeutic procedure uses Microbicides,62
+10595006,Therapeutic procedure uses Microbicides,64
+10595193,enrofloxacin coexists with Pharmaceutical Preparations,67
+10595361,Covers treats Tick-Borne Encephalitis,70
+10595474,Behavior process of Human,72
+10595632,Infection process of Adult,75
+10595725,Fever process of Patients,76
+10595759,Fever process of Females,76
+10595794,Fever process of Males,76
+10595906,Recombinant DNA part of 16s,78
+10595985,Tick-Borne Infections process of Individual,79
+10596143,"Glossitis, Benign Migratory process of Patients",81
+10596199,"Glossitis, Benign Migratory process of Patients",81
+10596244,Symptoms process of Patients,81
+10596294,Lyme Disease process of Patients,81
+10596383,Diagnosis treats Patients,82
+10596492,Immunofluorescence diagnoses Infection,83
+10596565,Lyme Disease process of Patients,84
+10596660,Lyme Disease process of Individual,85
+10596772,Disease process of Adult,87
+10596805,Disorder characterized by fever process of Adult,87
+10597199,"4,5-dibromo-2-pyrrolic acid compared with 1-oleoyl-2-stearoylphosphatidylcholine",97
+10597287,"4,5-dibromo-2-pyrrolic acid inhibits DNA",98
+10597421,"4,5-dibromo-2-pyrrolic acid interacts with Specific antigen",100
+10597542,Neuropeptides affects Inflammation,102
+10597633,Crosstalk causes Autoimmunity,103
+10597756,neuropeptide Y|NPY interacts with T-Lymphocyte,105
+10597803,neuropeptide Y|NPY stimulates Antigen-Presenting Cells,105
+10597925,Mammals location of Toll-like receptors,107
+10598015,Endosomes location of Compartments,108
+10598051,Cell surface location of receptor,108
+10598148,"RNA, Small Interfering interacts with Ribose",110
+10598263,E2F1 gene|E2F1|UBE2L3 causes Apoptosis,112
+10598476,E2F1 gene|E2F1|UBE2L3 interacts with Pharmaceutical Preparations,116
+10598517,E2F1 gene|E2F1|UBE2L3 causes Apoptosis,116
+10599076,Gene Expression process of Scorpaenidae,123
+10599190,Vitellogenins part of Scorpaenidae,124
+10599329,Vitellogenins part of Scorpaenidae,125
+10599368,Vitellogenins part of Scorpaenidae,125
+10599395,Vitellogenins affects No past history,125
+10599484,Vitellogenins part of Scorpaenidae,126
+10599560,Vitellogenins part of Scorpaenidae,127
+10599602,Vitellogenins part of Scorpaenidae,127
+10599653,Injection procedure treats Female,127
+10599747,Vitellogenins part of Scorpaenidae,128
+10599840,Vitellogenins part of Scorpaenidae,129
+10600338,Homologous Gene part of Hemicentrotus pulcherrimus,141
+10600422,cDNA Library part of Gastrula,142
+10600456,Homologous Gene part of Hemicentrotus pulcherrimus,142
+10600542,Blastocyst structure part of Mesenchyma,144
+10600645,In Situ Hybridization uses Mounts,146
+10600813,Embryo location of PPY,151
+10600845,Inferior Colliculus part of Males,151
+10600962,PPY part of Mothers,153
+10600997,Cells part of Nurses,153
+10601037,Cytoplasm location of PPY,153
+10601150,Cytoplasm part of Spermatocytes,155
+10601184,Inferior Colliculus location of PPY,155
+10601265,Cell Nucleus part of Cells,156
+10601441,Column location of Diastasis,160
+10601592,Drug Kinetics process of Rattus norvegicus,163
+10601803,Extracellular Matrix location of Proteoglycan,166
+10601941,GAG Gene converts to Glycosaminoglycans,168
+10601994,GAG Gene converts to Oligosaccharides,168
+10602026,Electrophoresis uses Structural analysis,168
+10602109,Enzymes interacts with Glycosaminoglycans,169
+10602147,Chemicals interacts with Glycosaminoglycans,169
+10602185,Glycosaminoglycans converts to Disaccharides,169
+10602215,Glycosaminoglycans converts to Oligosaccharides,169
+10602419,Diabetes process of Patients,173
+10602491,Detection uses Sorbate,174
+10603013,"PTH protein, human|PTH associated with osteosarcoma",187
+10603069,"PTH protein, human|PTH associated with Malignant Neoplasms",187

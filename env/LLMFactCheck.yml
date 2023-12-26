@@ -15,3 +15,4 @@ dependencies:
   - pip:
     - llama-cpp-python==0.1.78
     - huggingface-hub
+    - openai

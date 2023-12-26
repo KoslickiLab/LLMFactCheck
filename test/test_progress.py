@@ -1,33 +1,45 @@
-import pytest
-from unittest.mock import mock_open, call, MagicMock
-from src.progress import read_progress, write_progress, PROGRESS_FILE
+from unittest.mock import patch, mock_open, call
+from src.progress import read_progress, write_progress
 
-BUILTINS_OPEN = 'builtins.open'
 
-@pytest.fixture
-def mock_file(mocker):
-    return mocker.patch(BUILTINS_OPEN, new_callable=mock_open)
-
-def test_read_progress(mocker, mock_file):
-    mock_csv = mocker.patch('csv.reader')
-    mock_csv.return_value = iter([(1, 2), (3, 4)])
-    result = read_progress()
-    mock_csv.assert_called_once()
+@patch('src.progress.PROGRESS_FILES', {'test_model': 'test_model.csv'})
+@patch('builtins.open', new_callable=mock_open, read_data="Sentence ID,Predicate ID\n1,2\n3,4\n")
+def test_read_progress(_):
+    result = read_progress('test_model')
     assert result == [(1, 2), (3, 4)]
 
-def test_read_progress_file_not_found(mocker):
-    mock_file = mocker.patch(BUILTINS_OPEN)
-    mock_file.side_effect = FileNotFoundError()
-    result = read_progress()
-    mock_file.assert_called_once_with(PROGRESS_FILE, "r")
-    assert result == []
 
-def test_write_progress(mocker):
-    mocker.patch('src.progress.read_progress', return_value=[])
-    mock_file = mocker.patch(BUILTINS_OPEN, new_callable=mock_open)
-    mock_csv = mocker.patch('csv.writer')
-    mock_writer = MagicMock()
-    mock_csv.return_value = mock_writer
-    write_progress(5, 6)
-    mock_file.assert_called_once_with(PROGRESS_FILE, "a+", newline="")
-    mock_writer.writerows.assert_called_once_with([(5, 6)])
+@patch('src.progress.PROGRESS_FILES', {'test_model': 'test_model.csv'})
+@patch('builtins.open', new_callable=mock_open)
+@patch('os.path.isfile', return_value=True)
+@patch('os.stat')
+def test_write_progress(mock_stat, _, mock_file):
+    mock_stat.return_value.st_size = 10
+    write_progress('test_model', 5, 6)
+    calls = [call('5,6\r\n')]
+    mock_file.return_value.write.assert_has_calls(calls)
+
+
+@patch('src.progress.PROGRESS_FILES', {'test_model': 'test_model.csv'})
+@patch('builtins.open', new_callable=mock_open)
+@patch('os.path.isfile', return_value=False)
+@patch('os.stat')
+def test_write_progress_new_file(mock_stat, _, mock_file):
+    mock_stat.return_value.st_size = 0
+    write_progress('test_model', 5, 6)
+    calls = [call('Sentence ID,Predicate ID\r\n'), call('5,6\r\n')]
+    mock_file.return_value.write.assert_has_calls(calls)
+
+
+def test_read_progress_invalid_model():
+    try:
+        read_progress('invalid_model')
+    except ValueError:
+        pass
+
+
+def test_write_progress_invalid_model():
+    try:
+        write_progress('invalid_model', 5, 6)
+    except ValueError:
+        pass

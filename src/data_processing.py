@@ -1,18 +1,29 @@
 import os
-import re
 import csv
 from typing import Tuple, TextIO
-
 import pandas as pd
-from llama_cpp import Llama
-from src.llama_interaction import get_llama_result
-from src.result_writing import write_result_to_csv, write_progress
 
-def read_data_from_files(predication_file: str, sentence_file: str) -> Tuple[pd.DataFrame, pd.DataFrame]:
-    predication_data = pd.read_csv(os.path.join('data', predication_file), delimiter=',', header=None, engine='python')
-    predication_data.columns = [
+
+def read_data_from_files(triple_file: str, sentence_file: str) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    """
+    Read data from specified triple and sentence files into pandas DataFrames.
+
+    This function reads two CSV files: one containing triples data and the other containing sentences.
+    It sets custom column names for the dataframes and performs basic preprocessing like stripping
+    quotes from the sentence strings.
+
+    Parameters:
+    triple_file (str): File name of the triples CSV file located in the 'data' directory.
+    sentence_file (str): File name of the sentences CSV file located in the 'data' directory.
+
+    Returns:
+    Tuple[pd.DataFrame, pd.DataFrame]: A tuple of two pandas DataFrames, one for triples and the other for sentences.
+    """
+    triple_data = pd.read_csv(os.path.join('data', triple_file), delimiter=',', header=None, engine='python')
+    triple_data.columns = [
         "PREDICATION_ID", "SENTENCE_ID", "PMID", "PREDICATE", "SUBJECT_CUI", "SUBJECT_NAME",
-        "SUBJECT_SEMTYPE", "SUBJECT_NOVELTY", "OBJECT_CUI", "OBJECT_NAME", "OBJECT_SEMTYPE", "OBJECT_NOVELTY", "Column", "Column", "Column"
+        "SUBJECT_SEMTYPE", "SUBJECT_NOVELTY", "OBJECT_CUI", "OBJECT_NAME", "OBJECT_SEMTYPE",
+        "OBJECT_NOVELTY", "Column", "Column", "Column"
     ]
 
     sentence_data = pd.read_csv(os.path.join('data', sentence_file), delimiter=',', header=None, engine='python')
@@ -21,21 +32,25 @@ def read_data_from_files(predication_file: str, sentence_file: str) -> Tuple[pd.
         "SECTION_HEADER", "NORMALIZED_SECTION_HEADER", "Column", "Column"
     ]
     sentence_data["SENTENCE"] = sentence_data["SENTENCE"].str.strip('""')
-    return predication_data, sentence_data
-
-
-def process_predicate_row(row: pd.Series) -> Tuple[int, int, str]:
-    sentence_id = row["SENTENCE_ID"]
-    predicate_id = row["PREDICATION_ID"]
-    predicate_raw = row["PREDICATE"].strip('""_').replace('_', ' ').lower()
-    predicate = "is a" if predicate_raw == "isa" else predicate_raw
-    subject_name = row["SUBJECT_NAME"].strip('""_')
-    object_name = row["OBJECT_NAME"].strip('""_')
-    full_predicate = f"{subject_name} {predicate} {object_name}"
-    return sentence_id, predicate_id, full_predicate
+    return triple_data, sentence_data
 
 
 def initialize_writers(result_file: str, progress_file_path: str) -> Tuple[csv.writer, csv.writer, TextIO, TextIO]:
+    """
+    Initialize CSV writers for writing results and progress to files.
+
+    This function opens the specified result and progress files in append mode and
+    initializes csv.writer objects for them. It handles exceptions during file opening
+    and raises them after logging.
+
+    Parameters:
+    result_file (str): The file path for writing result data.
+    progress_file_path (str): The file path for writing progress data.
+
+    Returns:
+    Tuple[csv.writer, csv.writer, TextIO, TextIO]: A tuple containing two csv.writer objects
+                                                    and two file objects for results and progress.
+    """
     try:
         console_results_file = open(result_file, mode="a", newline="")
         progress_file = open(progress_file_path, mode="a", newline="")
@@ -48,12 +63,38 @@ def initialize_writers(result_file: str, progress_file_path: str) -> Tuple[csv.w
 
 
 def save_state(progress_file_path: str, last_processed: dict) -> None:
+    """
+    Save the last processed state to a progress file.
+
+    This function writes the last processed sentence ID and predicate ID to the progress file.
+    It's used to keep track of progress in case of interruptions during processing.
+
+    Parameters:
+    progress_file_path (str): The file path for the progress file.
+    last_processed (dict): A dictionary containing the 'sentence_id' and 'predicate_id' of the last processed item.
+
+    Returns:
+    None
+    """
     with open(progress_file_path, 'a+', newline='') as progress_file:
         csv_writer = csv.writer(progress_file)
         csv_writer.writerow([last_processed['sentence_id'], last_processed['predicate_id']])
 
 
 def load_state(progress_file_path: str):
+    """
+    Load the last processed state from a progress file.
+
+    This function reads the progress file to find the last processed sentence ID and predicate ID.
+    It's used to resume processing from where it was last stopped.
+
+    Parameters:
+    progress_file_path (str): The file path for the progress file.
+
+    Returns:
+    dict or None: A dictionary containing the 'sentence_id' and 'predicate_id' of the last processed item,
+                  or None if the file does not exist or is empty.
+    """
     try:
         with open(progress_file_path, 'r') as progress_file:
             reader = csv.reader(progress_file)
@@ -65,76 +106,3 @@ def load_state(progress_file_path: str):
                 return None
     except FileNotFoundError:
         return None
-
-
-def process_sentence(lcpp_llm: Llama, sentence_id: int, sentence: str, predicates_for_sentence: list, progress: set,
-                     console_results_writer: csv.writer, progress_writer: csv.writer) -> None:
-    global is_correct
-    for sentence_id, predicate_id, predicate_text in predicates_for_sentence:
-        if (sentence_id, predicate_id) not in progress:
-            prompt = f"'Is the triple '{predicate_text}' supported by the sentence: '{sentence}'?"
-
-            result = get_llama_result(lcpp_llm, prompt)
-            question = f"Is the triple '{predicate_text}' supported by the sentence: '{sentence}'?"
-
-            match = re.search(r"\b(Yes|No)\b", result)
-
-            if match:
-                answer = result[match.start():]
-                is_correct = match.group(0) == 'Yes'
-            else:
-                match = re.search(r"\?([^?]+)$", result)
-                if match:
-                    answer = match.group(1).strip()
-                else:
-                    answer = result.strip()
-                is_correct = "Undefined"
-
-            write_result_to_csv(
-                console_results_writer, predicate_id, predicate_text, sentence_id, sentence,
-                is_correct, question, answer.strip() if answer else None
-            )
-            write_progress(progress_writer, sentence_id, predicate_id)
-        else:
-            print(f"Skipping sentence_id: {sentence_id}, predicate_id: {predicate_id}")
-
-
-def process_data_and_fact_check(lcpp_llm: Llama, predication_data: pd.DataFrame, sentence_data: pd.DataFrame,
-                                result_file: str, progress_file_path: str) -> None:
-    sentence_dict = {}
-
-    last_processed = load_state(progress_file_path)
-
-    if last_processed:
-        # Skip already processed sentences
-        predication_data = predication_data[
-            predication_data['SENTENCE_ID'].astype(int) > int(last_processed['sentence_id'])]
-        print(
-            f"Resuming from sentence_id: {last_processed['sentence_id']}, predicate_id: {last_processed['predicate_id']}"
-        )
-
-    (console_results_writer, progress_writer,
-     console_results_file, progress_file) = initialize_writers(result_file, progress_file_path)
-
-    if not last_processed:
-        console_results_writer.writerow(
-            ["Predicate ID", "Predicate", "Sentence ID", "Sentence", "Is Correct", "Question", "Answer"])
-
-    for index, row in predication_data.iterrows():
-        sentence_id,  predicate_id, full_predicate = process_predicate_row(row)
-
-        if sentence_id not in sentence_dict:
-            sentence_dict[sentence_id] = []
-
-        sentence_dict[sentence_id].append((sentence_id, predicate_id, full_predicate))
-
-    for sentence_id, predicates_for_sentence in sentence_dict.items():
-        if sentence_id in sentence_data['SENTENCE_ID'].values:
-            sentence = sentence_data[sentence_data['SENTENCE_ID'].astype(int) == int(sentence_id)]['SENTENCE'].values[0]
-            process_sentence(
-                lcpp_llm, int(sentence_id), sentence, predicates_for_sentence,
-                set(), console_results_writer, progress_writer)
-        else:
-            print(f"Sentence ID {sentence_id} not found in sentence_data")
-
-    print("Processing complete.")

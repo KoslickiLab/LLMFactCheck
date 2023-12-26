@@ -35,4 +35,3 @@ plt.pie([accuracy, incorrect], labels=['Correct', 'Incorrect'], colors=['green',
 plt.title('Model Accuracy')
 plt.text(0, -1.5, f"The accuracy of the model is {accuracy*100:.2f}%", ha='center', weight='bold', fontsize=12)
 plt.show()
-
