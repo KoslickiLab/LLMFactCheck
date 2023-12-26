@@ -7,15 +7,17 @@ jobs:
       run:
         shell: bash -el {0}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: conda-incubator/setup-miniconda@v2
       with:
         activate-environment: myLLMFactCheck
         environment-file: env/LLMFactCheck.yml
     - name: Run test
-      run: pytest test/
-    - name: Badge Action
-      uses: emibcn/badge-action@v2.0.2
+      run: pytest test/ --cov=./  --cov-report xml:tests.xml
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v3
+      env:
+       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
 # You can use GitHub Actions without using the CODECOV_TOKEN.
 # This token is used to authenticate to the Codecov service, which collects and analyzes code coverage data.
@@ -30,5 +32,7 @@ jobs:
 #        files: ./cov.xml
 #      env:
 #        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+
 
 
