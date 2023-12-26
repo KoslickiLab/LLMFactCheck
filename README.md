@@ -1,3 +1,4 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=KoslickiLab_LLMFactCheck&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=KoslickiLab_LLMFactCheck)
 <div align="center">
   <img src="./img/project_logo.jpg" alt="Project Image">
 <p>
