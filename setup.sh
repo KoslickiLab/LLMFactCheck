@@ -1,4 +1,5 @@
 #! /bin/bash
+set -euo pipefail
 # Setup environment for running LLMFactCheck
 
 # Check if the LLMFactCheck environment exists
