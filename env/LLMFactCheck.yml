@@ -1,6 +1,5 @@
 name: myLLMFactCheck
 channels:
-  - bioconda
   - conda-forge
   - defaults
 dependencies:
@@ -10,6 +9,7 @@ dependencies:
   - scikit-learn
   - matplotlib
   - pytest
+  - pytest-cov
   - pytest-mock
   - pip
   - pip:
