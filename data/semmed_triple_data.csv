@@ -1,0 +1,200 @@
+10592604,16,16530475,PROCESS_OF,C0003725,Arboviruses,virs,1,C0999630,Lepus capensis,mamm,1,\N,\N,\N
+10592697,17,16530475,ISA,C0039258,Tahyna virus,virs,1,C0446169,California Group Viruses,virs,1,\N,\N,\N
+10592728,17,16530475,ISA,C0318627,Eyach virus,virs,1,C0206590,Coltivirus,virs,1,\N,\N,\N
+10592759,17,16530475,ISA,C0446169,California Group Viruses,virs,1,C0003725,Arboviruses,virs,1,\N,\N,\N
+10592832,18,16530475,PROCESS_OF,C0012634,Disease,dsyn,0,C0020114,Human,humn,0,\N,\N,\N
+10592873,18,16530475,CAUSES,C0042776,Virus,virs,1,C0012634,Disease,dsyn,0,\N,\N,\N
+10593057,23,16530475,LOCATION_OF,C0999630,Lepus capensis,mamm,1,C0003241,Antibodies,aapp,1,\N,\N,\N
+10593208,26,16530476,PART_OF,C0242210,Binding Protein,bacs,1,2273,FHL1,aapp,1,\N,\N,\N
+10593243,26,16530476,PART_OF,C0056207|3075,COMPLEMENT FACTOR H|CFH,aapp,1,C0006034,Borrelia burgdorferi,bact,1,\N,\N,\N
+10593287,26,16530476,PART_OF,C0242210,Binding Protein,aapp,1,C0006034,Borrelia burgdorferi,bact,1,\N,\N,\N
+10593621,34,16530477,PART_OF,7523,XS,gngm,1,C0006034,Borrelia burgdorferi,bact,1,\N,\N,\N
+10593815,39,16530477,PRODUCES,7523,XS,gngm,1,C0019878,homocysteine,aapp,1,\N,\N,\N
+10593856,39,16530477,INTERACTS_WITH,C0004611,Bacteria,bact,1,C0025646,Methionine,aapp,1,\N,\N,\N
+10593932,40,16530477,AFFECTS,C0031516,Pheromone,bacs,1,C0017262,Gene Expression,genf,1,\N,\N,\N
+10594285,50,16530478,TREATS,C0718782,B.S.S.,phsu,1,C0001675,Adult,aggp,1,\N,\N,\N
+10594435,53,16530478,PART_OF,C1167395,host,celc,1,C0042567,Vertebrates,vtbt,0,\N,\N,\N
+10594472,53,16530478,AFFECTS,C0718782,B.S.S.,inch,1,C1167395,host,celc,1,\N,\N,\N
+10594584,55,16530479,ISA,C0162318,Farm Animals,anim,1,C0003062,Animals,anim,0,\N,\N,\N
+10594689,57,16530479,PROCESS_OF,C0012634,Disease,dsyn,0,C0162318,Farm Animals,anim,1,\N,\N,\N
+10594898,62,16530479,USES,C0087111,Therapeutic procedure,topp,0,C1136254,Microbicides,phsu,1,\N,\N,\N
+10595006,64,16530479,USES,C0087111,Therapeutic procedure,topp,0,C1136254,Microbicides,phsu,1,\N,\N,\N
+10595160,67,16530479,ISA,C0059374,enrofloxacin,antb,1,C0949665,Fluoroquinolones,orch,1,\N,\N,\N
+10595193,67,16530479,COEXISTS_WITH,C0059374,enrofloxacin,antb,1,C0013227,Pharmaceutical Preparations,phsu,0,\N,\N,\N
+10595361,70,16530480,TREATS,C0180153,Covers,medd,1,C0014061,Tick-Borne Encephalitis,dsyn,1,\N,\N,\N
+10595474,72,16530480,PROCESS_OF,C0004927,Behavior,inbe,0,C0020114,Human,humn,0,\N,\N,\N
+10595632,75,16530481,PROCESS_OF,C0021311,Infection,dsyn,1,C0001675,Adult,humn,1,\N,\N,\N
+10595725,76,16530481,PROCESS_OF,C0015967,Fever,fndg,1,C0030705,Patients,humn,0,\N,\N,\N
+10595759,76,16530481,PROCESS_OF,C0015967,Fever,fndg,1,C0086287,Females,humn,1,\N,\N,\N
+10595794,76,16530481,PROCESS_OF,C0015967,Fever,fndg,1,C0086582,Males,humn,1,\N,\N,\N
+10595906,78,16530481,PART_OF,C0012931,Recombinant DNA,bacs,1,C1552130,16s,bpoc,0,\N,\N,\N
+10595985,79,16530481,PROCESS_OF,C0162699,Tick-Borne Infections,dsyn,1,C0237401,Individual,humn,0,\N,\N,\N
+10596143,81,16530481,PROCESS_OF,C0017677,"Glossitis, Benign Migratory",dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10596167,81,16530481,ISA,C0017677,"Glossitis, Benign Migratory",dsyn,1,C1457887,Symptoms,sosy,0,\N,\N,\N
+10596199,81,16530481,PROCESS_OF,C0017677,"Glossitis, Benign Migratory",dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10596244,81,16530481,PROCESS_OF,C1457887,Symptoms,sosy,0,C0030705,Patients,humn,0,\N,\N,\N
+10596294,81,16530481,PROCESS_OF,C0024198,Lyme Disease,dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10596383,82,16530481,TREATS,C0011900,Diagnosis,hlca,0,C0030705,Patients,humn,0,\N,\N,\N
+10596492,83,16530481,DIAGNOSES,C0079603,Immunofluorescence,lbpr,1,C0021311,Infection,dsyn,1,\N,\N,\N
+10596565,84,16530481,PROCESS_OF,C0024198,Lyme Disease,dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10596660,85,16530481,PROCESS_OF,C0024198,Lyme Disease,dsyn,1,C0237401,Individual,humn,0,\N,\N,\N
+10596772,87,16530481,PROCESS_OF,C0012634,Disease,dsyn,0,C0001675,Adult,humn,1,\N,\N,\N
+10596805,87,16530481,PROCESS_OF,C0743841,Disorder characterized by fever,dsyn,1,C0001675,Adult,humn,1,\N,\N,\N
+10597199,97,16530482,compared_with,C0638611,"4,5-dibromo-2-pyrrolic acid",orch,1,C0089701,1-oleoyl-2-stearoylphosphatidylcholine,lipd,1,\N,\N,\N
+10597287,98,16530482,INHIBITS,C0638611,"4,5-dibromo-2-pyrrolic acid",orch,1,C0012854,DNA,bacs,1,\N,\N,\N
+10597421,100,16530482,INTERACTS_WITH,C0638611,"4,5-dibromo-2-pyrrolic acid",orch,1,C0456981,Specific antigen,imft,1,\N,\N,\N
+10597542,102,16530483,AFFECTS,C0027895,Neuropeptides,aapp,1,C0021368,Inflammation,patf,1,\N,\N,\N
+10597633,103,16530483,CAUSES,C1504598,Crosstalk,inpo,1,C0004368,Autoimmunity,patf,1,\N,\N,\N
+10597756,105,16530483,INTERACTS_WITH,C0027893|4852,neuropeptide Y|NPY,gngm,1,C0039194,T-Lymphocyte,cell,1,\N,\N,\N
+10597803,105,16530483,STIMULATES,C0027893|4852,neuropeptide Y|NPY,aapp,1,C0003315,Antigen-Presenting Cells,cell,1,\N,\N,\N
+10597925,107,16530484,LOCATION_OF,C0024660,Mammals,mamm,0,C0670896,Toll-like receptors,aapp,1,\N,\N,\N
+10598015,108,16530484,LOCATION_OF,C0034850,Endosomes,celc,1,C1185625,Compartments,bsoj,0,\N,\N,\N
+10598051,108,16530484,LOCATION_OF,C0699040,Cell surface,celc,1,C0597357,receptor,aapp,1,\N,\N,\N
+10598148,110,16530484,INTERACTS_WITH,C1099354,"RNA, Small Interfering",bacs,1,C0035549,Ribose,bacs,1,\N,\N,\N
+10598263,112,16530485,CAUSES,C0812258|1869|7332,E2F1 gene|E2F1|UBE2L3,gngm,1,C0162638,Apoptosis,celf,1,\N,\N,\N
+10598476,116,16530485,INTERACTS_WITH,C0812258|1869|7332,E2F1 gene|E2F1|UBE2L3,gngm,1,C0013227,Pharmaceutical Preparations,phsu,0,\N,\N,\N
+10598517,116,16530485,CAUSES,C0812258|1869|7332,E2F1 gene|E2F1|UBE2L3,gngm,1,C0162638,Apoptosis,celf,1,\N,\N,\N
+10599076,123,16530488,PROCESS_OF,C0017262,Gene Expression,genf,1,C0998896,Scorpaenidae,fish,1,\N,\N,\N
+10599190,124,16530488,PART_OF,C0042896,Vitellogenins,gngm,1,C0998896,Scorpaenidae,fish,1,\N,\N,\N
+10599329,125,16530488,PART_OF,C0042896,Vitellogenins,gngm,1,C0998896,Scorpaenidae,fish,1,\N,\N,\N
+10599368,125,16530488,PART_OF,C0042896,Vitellogenins,gngm,1,C0998896,Scorpaenidae,fish,1,\N,\N,\N
+10599395,125,16530488,AFFECTS,C0042896,Vitellogenins,aapp,1,C0332124,No past history,fndg,1,\N,\N,\N
+10599484,126,16530488,PART_OF,C0042896,Vitellogenins,gngm,1,C0998896,Scorpaenidae,fish,1,\N,\N,\N
+10599560,127,16530488,PART_OF,C0042896,Vitellogenins,gngm,1,C0998896,Scorpaenidae,fish,1,\N,\N,\N
+10599602,127,16530488,PART_OF,C0042896,Vitellogenins,gngm,1,C0998896,Scorpaenidae,fish,1,\N,\N,\N
+10599653,127,16530488,TREATS,C1533685,Injection procedure,topp,1,C0015780,Female,orga,1,\N,\N,\N
+10599747,128,16530488,PART_OF,C0042896,Vitellogenins,gngm,1,C0998896,Scorpaenidae,fish,1,\N,\N,\N
+10599840,129,16530488,PART_OF,C0042896,Vitellogenins,gngm,1,C0998896,Scorpaenidae,fish,1,\N,\N,\N
+10600338,141,16530490,PART_OF,C1334043,Homologous Gene,gngm,1,C0998689,Hemicentrotus pulcherrimus,invt,1,\N,\N,\N
+10600422,142,16530490,PART_OF,C0751608,cDNA Library,gngm,1,C0017199,Gastrula,emst,1,\N,\N,\N
+10600456,142,16530490,PART_OF,C1334043,Homologous Gene,gngm,1,C0998689,Hemicentrotus pulcherrimus,invt,1,\N,\N,\N
+10600542,144,16530490,PART_OF,C1281743,Blastocyst structure,emst,1,C0162415,Mesenchyma,emst,1,\N,\N,\N
+10600645,146,16530490,USES,C0162788,In Situ Hybridization,lbpr,1,C0181909,Mounts,medd,1,\N,\N,\N
+10600813,151,16530491,LOCATION_OF,C0013935,Embryo,emst,1,5539,PPY,aapp,1,\N,\N,\N
+10600845,151,16530491,PART_OF,C0021358,Inferior Colliculus,bpoc,1,C0086582,Males,humn,1,\N,\N,\N
+10600962,153,16530491,PART_OF,5539,PPY,gngm,1,C0026591,Mothers,humn,1,\N,\N,\N
+10600997,153,16530491,PART_OF,C0007634,Cells,cell,0,C0028661,Nurses,humn,1,\N,\N,\N
+10601037,153,16530491,LOCATION_OF,C0010834,Cytoplasm,celc,1,5539,PPY,aapp,1,\N,\N,\N
+10601150,155,16530491,PART_OF,C0010834,Cytoplasm,celc,1,C0037863,Spermatocytes,cell,1,\N,\N,\N
+10601184,155,16530491,LOCATION_OF,C0021358,Inferior Colliculus,bpoc,1,5539,PPY,aapp,1,\N,\N,\N
+10601265,156,16530491,PART_OF,C0007610,Cell Nucleus,celc,1,C0007634,Cells,cell,0,\N,\N,\N
+10601441,160,16530492,LOCATION_OF,C1185738,Column,bpoc,1,C0036679,Diastasis,patf,1,\N,\N,\N
+10601592,163,16530492,PROCESS_OF,C0031327,Drug Kinetics,phsf,0,C0034693,Rattus norvegicus,mamm,1,\N,\N,\N
+10601714,165,16530493,ISA,C0017973,Glycosaminoglycans,bacs,1,C0032594,Polysaccharides,carb,1,\N,\N,\N
+10601803,166,16530493,LOCATION_OF,C0015350,Extracellular Matrix,tisu,1,C0033692,Proteoglycan,aapp,1,\N,\N,\N
+10601941,168,16530493,CONVERTS_TO,C0017346,GAG Gene,gngm,1,C0017973,Glycosaminoglycans,carb,1,\N,\N,\N
+10601994,168,16530493,CONVERTS_TO,C0017346,GAG Gene,gngm,1,C0028959,Oligosaccharides,carb,1,\N,\N,\N
+10602026,168,16530493,USES,C0013855,Electrophoresis,lbpr,1,C0204514,Structural analysis,topp,1,\N,\N,\N
+10602109,169,16530493,INTERACTS_WITH,C0014442,Enzymes,enzy,0,C0017973,Glycosaminoglycans,bacs,1,\N,\N,\N
+10602147,169,16530493,INTERACTS_WITH,C0220806,Chemicals,chem,1,C0017973,Glycosaminoglycans,bacs,1,\N,\N,\N
+10602185,169,16530493,CONVERTS_TO,C0017973,Glycosaminoglycans,bacs,1,C0012611,Disaccharides,carb,1,\N,\N,\N
+10602215,169,16530493,CONVERTS_TO,C0017973,Glycosaminoglycans,bacs,1,C0028959,Oligosaccharides,carb,1,\N,\N,\N
+10602419,173,16530494,PROCESS_OF,C0011847,Diabetes,dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10602491,174,16530494,USES,C1511790,Detection,topp,1,C1533168,Sorbate,phsu,1,\N,\N,\N
+10602733,182,16530495,ISA,C0004239,Atrial Flutter,patf,1,C0039231,Tachycardia,patf,1,\N,\N,\N
+10602764,182,16530495,ISA,C0039234,"Tachycardia, Ectopic Atrial",dsyn,1,C0039231,Tachycardia,patf,1,\N,\N,\N
+10602804,182,16530495,ISA,C0039235,"Tachycardia, Ectopic Junctional",dsyn,1,C0039231,Tachycardia,patf,1,\N,\N,\N
+10602837,182,16530495,ISA,C0042514,"Tachycardia, Ventricular",patf,1,C0039231,Tachycardia,patf,1,\N,\N,\N
+10603013,187,16530496,ASSOCIATED_WITH,C0020063|5741,"PTH protein, human|PTH",aapp,1,C0029463,osteosarcoma,neop,1,\N,\N,\N
+10603029,187,16530496,ISA,C0029463,osteosarcoma,neop,1,C0006826,Malignant Neoplasms,neop,1,\N,\N,\N
+10603069,187,16530496,ASSOCIATED_WITH,C0020063|5741,"PTH protein, human|PTH",aapp,1,C0006826,Malignant Neoplasms,neop,1,\N,\N,\N
+10603164,189,16530496,PROCESS_OF,C0221002,"Hyperparathyroidism, Primary",dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10603247,190,16530496,PROCESS_OF,C0029463,osteosarcoma,neop,1,C0030705,Patients,humn,0,\N,\N,\N
+10603339,191,16530496,PROCESS_OF,C0221002,"Hyperparathyroidism, Primary",dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10603447,193,16530496,NEG_OCCURS_IN,C0006826,Malignant Neoplasms,neop,1,C0683971,General Population,popg,0,\N,\N,\N
+10603538,194,16530496,OCCURS_IN,C0012634,Disease,dsyn,0,C0683971,General Population,popg,0,\N,\N,\N
+10603641,196,16530496,PROCESS_OF,C0029463,osteosarcoma,neop,1,C0030705,Patients,humn,0,\N,\N,\N
+10603772,199,16530496,ISA,C0020063|5741,"PTH protein, human|PTH",aapp,1,C0087111,Therapeutic procedure,topp,0,\N,\N,\N
+10603809,199,16530496,USES,C0087111,Therapeutic procedure,topp,0,C0020063|5741,"PTH protein, human|PTH",aapp,1,\N,\N,\N
+10603857,199,16530496,TREATS,C0020063|5741,"PTH protein, human|PTH",horm,1,C0027651,Neoplasm,neop,1,\N,\N,\N
+10603961,200,16530497,ASSOCIATED_WITH,C0699748,Pathogenesis,patf,1,C0017337,Genes,gngm,0,\N,\N,\N
+10604007,200,16530497,ASSOCIATED_WITH,C0699748,Pathogenesis,patf,1,C1414461|2099,ESR1 gene|ESR1,gngm,1,\N,\N,\N
+10604038,200,16530497,ASSOCIATED_WITH,C0699748,Pathogenesis,patf,1,C1414462|2100,ESR2 gene|ESR2,gngm,1,\N,\N,\N
+10604108,201,16530497,ISA,C0029456,Osteoporosis,dsyn,1,C0012634,Disease,dsyn,0,\N,\N,\N
+10604188,202,16530497,PROCESS_OF,C0029456,Osteoporosis,dsyn,1,C0020114,Human,humn,0,\N,\N,\N
+10604268,203,16530497,COEXISTS_WITH,C0752046,Single Nucleotide Polymorphism,nusq,1,C0017337,Genes,gngm,0,\N,\N,\N
+10604292,203,16530497,COEXISTS_WITH,C0017337,Genes,gngm,0,C0014939,Estrogens,horm,1,\N,\N,\N
+10604325,203,16530497,PROCESS_OF,C0029456,Osteoporosis,dsyn,1,C0043210,Woman,humn,1,\N,\N,\N
+10604461,206,16530497,INTERACTS_WITH,C1414462|2100,ESR2 gene|ESR2,gngm,1,C1414461|2099,ESR1 gene|ESR1,gngm,1,\N,\N,\N
+10604551,207,16530497,ASSOCIATED_WITH,C1334904|8204,NRIP1 gene|NRIP1,gngm,1,C0029456,Osteoporosis,dsyn,1,\N,\N,\N
+10604592,207,16530497,ASSOCIATED_WITH,C1414462|2100,ESR2 gene|ESR2,gngm,1,C0029456,Osteoporosis,dsyn,1,\N,\N,\N
+10604700,209,16530497,ASSOCIATED_WITH,C1334904|8204,NRIP1 gene|NRIP1,gngm,1,C0029456,Osteoporosis,dsyn,1,\N,\N,\N
+10604840,212,16530502,TREATS,C0524722,Gastrointestinal Surgical Procedure,topp,1,C0028754,Obesity,dsyn,1,\N,\N,\N
+10609209,283,16530529,PART_OF,C0596119,apical membrane,celc,1,C0227525,Hepatocyte,cell,1,\N,\N,\N
+10609362,286,16530529,ISA,C0040549,Toxin,bacs,1,C0013227,Pharmaceutical Preparations,phsu,0,\N,\N,\N
+10609509,290,16530529,ISA,C0596902,Membrane Transport Proteins,aapp,1,C0013227,Pharmaceutical Preparations,phsu,0,\N,\N,\N
+10609671,293,16530531,ASSOCIATED_WITH,C0001617,Adrenal Cortex Hormones,phsu,1,C0021390,Inflammatory Bowel Diseases,dsyn,1,\N,\N,\N
+10609705,293,16530531,ASSOCIATED_WITH,C0666743,infliximab,aapp,1,C0021390,Inflammatory Bowel Diseases,dsyn,1,\N,\N,\N
+10609737,293,16530531,ASSOCIATED_WITH,C1527392,Immunomodulators,imft,1,C0021390,Inflammatory Bowel Diseases,dsyn,1,\N,\N,\N
+10609805,294,16530532,ASSOCIATED_WITH,C0001617,Adrenal Cortex Hormones,phsu,1,C0021390,Inflammatory Bowel Diseases,dsyn,1,\N,\N,\N
+10609844,294,16530532,ASSOCIATED_WITH,C0666743,infliximab,aapp,1,C0021390,Inflammatory Bowel Diseases,dsyn,1,\N,\N,\N
+10609883,294,16530532,ASSOCIATED_WITH,C1527392,Immunomodulators,imft,1,C0021390,Inflammatory Bowel Diseases,dsyn,1,\N,\N,\N
+10610158,301,16530538,NEG_ASSOCIATED_WITH,C0753114|156,Beta-Adrenergic Receptor Kinase 1|GRK2,aapp,1,C0020541,"Hypertension, Portal",dsyn,1,\N,\N,\N
+10610370,303,16530542,USES,C0199176,Prophylactic treatment,topp,1,C0001645,Adrenergic beta-Antagonists,phsu,1,\N,\N,\N
+10610397,303,16530542,TREATS,C0086388,Health Care,hlca,0,C0016059,Fibrosis,patf,1,\N,\N,\N
+10610453,304,16530543,LOCATION_OF,C0030274,Pancreas,bpoc,1,C1511606,Cystic Lesion,fndg,1,\N,\N,\N
+10610626,309,16530553,PART_OF,C0751973,Proteome,gngm,1,C0235974,Pancreatic carcinoma,neop,1,\N,\N,\N
+10610978,323,16530566,TREATS,C0025859,Metoprolol,phsu,1,C0027051,Myocardial Infarction,dsyn,1,\N,\N,\N
+10611011,323,16530566,TREATS,C0070166,clopidogrel,orch,1,C0027051,Myocardial Infarction,dsyn,1,\N,\N,\N
+10611110,325,16530568,TREATS,C0025859,Metoprolol,phsu,1,C0027051,Myocardial Infarction,dsyn,1,\N,\N,\N
+10611138,325,16530568,TREATS,C0070166,clopidogrel,orch,1,C0027051,Myocardial Infarction,dsyn,1,\N,\N,\N
+10611222,326,16530569,TREATS,C0025859,Metoprolol,phsu,1,C0027051,Myocardial Infarction,dsyn,1,\N,\N,\N
+10611267,326,16530569,TREATS,C0070166,clopidogrel,orch,1,C0027051,Myocardial Infarction,dsyn,1,\N,\N,\N
+10611529,328,16530572,TREATS,C0679771,Harm Reduction,topp,1,C0240816,Prostitute NOS,humn,1,\N,\N,\N
+10612762,345,16530579,TREATS,C0220908,Screening procedure,hlca,1,C0342257,Complications of Diabetes Mellitus,patf,1,\N,\N,\N
+10612795,345,16530579,TREATS,C0220908,Screening procedure,hlca,1,C1275743,Co-morbid conditions,fndg,1,\N,\N,\N
+10612830,345,16530579,TREATS,C1170884,Blood Glucose Monitoring,medd,1,C0011854,"Diabetes Mellitus, Insulin-Dependent",dsyn,1,\N,\N,\N
+10612915,346,16530579,COEXISTS_WITH,C0011854,"Diabetes Mellitus, Insulin-Dependent",dsyn,1,C0012634,Disease,dsyn,0,\N,\N,\N
+10613117,350,16530580,AFFECTS,C0233929,Emission,orgf,1,C0008946,Climate,npop,1,\N,\N,\N
+10613441,359,16530581,TREATS,C0677881,Cytotoxic Chemotherapy,topp,1,C0016627,Influenza in Birds,dsyn,1,\N,\N,\N
+10613551,361,16530581,PROCESS_OF,C0024291,"Lymphohistiocytosis, Hemophagocytic",dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10613587,361,16530581,PROCESS_OF,C0876991,Histiocytosis haematophagic,dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10613621,361,16530581,COEXISTS_WITH,C0876991,Histiocytosis haematophagic,dsyn,1,C0021311,Infection,dsyn,1,\N,\N,\N
+10613734,363,16530581,PROCESS_OF,C0042769,Virus Diseases,dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10613794,364,16530581,TREATS,C0677881,Cytotoxic Chemotherapy,topp,1,C0016627,Influenza in Birds,dsyn,1,\N,\N,\N
+10613828,364,16530581,COMPLICATES,C0024291,"Lymphohistiocytosis, Hemophagocytic",dsyn,1,C0021311,Infection,dsyn,1,\N,\N,\N
+10613863,364,16530581,PROCESS_OF,C0016627,Influenza in Birds,dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10613892,364,16530581,TREATS,C0677881,Cytotoxic Chemotherapy,topp,1,C0030705,Patients,podg,0,\N,\N,\N
+10614109,370,16530587,PROCESS_OF,C0086168,Dissociation,mobd,1,C0001675,Adult,humn,1,\N,\N,\N
+10614255,374,16530591,PROCESS_OF,C0026773,Multiple Personality Disorder,mobd,1,C0030705,Patients,humn,0,\N,\N,\N
+10614343,375,16530592,PROCESS_OF,C0026773,Multiple Personality Disorder,mobd,1,C0027361,Persons,humn,0,\N,\N,\N
+10614517,379,16530596,TREATS,C0087111,Therapeutic procedure,topp,0,C0012746,Dissociative disorder,mobd,1,\N,\N,\N
+10614730,384,16530601,CAUSES,C0403425,Focal segmental glomerulosclerosis,dsyn,1,C1261469,End stage renal failure,dsyn,1,\N,\N,\N
+10614846,385,16530601,COMPLICATES,C0020538,Hypertensive disease,dsyn,1,C1565489,Renal Insufficiency,dsyn,1,\N,\N,\N
+10614959,387,16530601,CAUSES,C0022658,Kidney Diseases,dsyn,1,C0699748,Pathogenesis,patf,1,\N,\N,\N
+10615143,391,16530601,PROCESS_OF,C0026882,Mutation,genf,1,C0010852,Cytoskeletal Proteins,gngm,1,\N,\N,\N
+10615285,394,16530602,ISA,C0024143,Lupus Nephritis,dsyn,1,C0024141,"Lupus Erythematosus, Systemic",dsyn,1,\N,\N,\N
+10615374,395,16530602,PREVENTS,C0087111,Therapeutic procedure,topp,0,C0879626,Adverse effects,patf,0,\N,\N,\N
+10615525,398,16530602,PROCESS_OF,C0233820,Insight,menp,1,C0003062,Animals,anim,0,\N,\N,\N
+10615565,398,16530602,PROCESS_OF,C0233820,Insight,menp,1,C0020114,Human,humn,0,\N,\N,\N
+10615677,400,16530603,NEG_CAUSES,C0035078,Kidney Failure,dsyn,1,C0011065,Cessation of life,orgf,1,\N,\N,\N
+10615760,401,16530603,COEXISTS_WITH,C0021368,Inflammation,patf,1,C0160420,Injury to kidney NOS,inpo,1,\N,\N,\N
+10615805,401,16530603,COEXISTS_WITH,C0021368,Inflammation,patf,1,C0277785,Functional disorder,patf,0,\N,\N,\N
+10615891,402,16530603,PROCESS_OF,C0022660,"Kidney Failure, Acute",dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10615926,402,16530603,PROCESS_OF,C0018802,Congestive heart failure,dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10616062,404,16530603,USES,C0857127,Induction,topp,1,C0079189,cytokine,aapp,1,\N,\N,\N
+10616165,405,16530603,LOCATION_OF,C0022646,Kidney,bpoc,1,C0175677,Injury,inpo,1,\N,\N,\N
+10616256,407,16530604,PROCESS_OF,C0022661,"Kidney Failure, Chronic",dsyn,1,C0008059,Child,humn,1,\N,\N,\N
+10616333,408,16530604,PROCESS_OF,C0022661,"Kidney Failure, Chronic",dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10616429,409,16530604,PROCESS_OF,C0022661,"Kidney Failure, Chronic",dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10616568,411,16530605,PROCESS_OF,C0018801,Heart failure,dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10616652,412,16530605,PROCESS_OF,C0018801,Heart failure,dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10616794,414,16530605,PROCESS_OF,C0018801,Heart failure,dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10616936,416,16530605,PROCESS_OF,C0018801,Heart failure,dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10616975,417,16530605,PROCESS_OF,C0598608,Hyperhomocysteinemia,dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10617032,418,16530605,LOCATION_OF,C0229671,Serum,bdsu,1,C0015879,Ferritin,aapp,1,\N,\N,\N
+10617065,418,16530605,TREATS,C0015879,Ferritin,aapp,1,C0030705,Patients,podg,0,\N,\N,\N
+10617110,418,16530605,TREATS,C0299583,Leptin,horm,1,C0030705,Patients,podg,0,\N,\N,\N
+10617141,418,16530605,TREATS,C0302583,Iron,phsu,1,C0030705,Patients,podg,0,\N,\N,\N
+10617244,419,16530605,PROCESS_OF,C0011065,Cessation of life,orgf,1,C0030705,Patients,humn,0,\N,\N,\N
+10617287,419,16530605,ASSOCIATED_WITH,C0011065,Cessation of life,orgf,1,C0028754,Obesity,dsyn,1,\N,\N,\N
+10617413,421,16530606,ASSOCIATED_WITH,C0025519,Metabolism,orgf,1,C0022658,Kidney Diseases,dsyn,1,\N,\N,\N
+10617485,422,16530606,PROCESS_OF,C0022661,"Kidney Failure, Chronic",dsyn,1,C0030705,Patients,humn,0,\N,\N,\N
+10617563,423,16530606,ISA,C0030705,Patients,podg,0,C1257890,Population Group,popg,0,\N,\N,\N
+10617609,423,16530606,PROCESS_OF,C0162429,Malnutrition,dsyn,1,C0030705,Patients,podg,0,\N,\N,\N
+10617641,423,16530606,PROCESS_OF,C0162429,Malnutrition,dsyn,1,C1257890,Population Group,humn,0,\N,\N,\N
+10617751,425,16530606,TREATS,C1273869,Intervention regimes,hlca,0,C0030705,Patients,humn,0,\N,\N,\N
+10617828,426,16530606,COEXISTS_WITH,C1275743,Co-morbid conditions,fndg,1,C0022661,"Kidney Failure, Chronic",dsyn,1,\N,\N,\N
+10617967,429,16530607,ASSOCIATED_WITH,C0002520,Amino Acids,aapp,1,C0035078,Kidney Failure,dsyn,1,\N,\N,\N
+10618086,431,16530607,NEG_PROCESS_OF,C0597297,Protein Turnover,moft,1,C0030705,Patients,humn,0,\N,\N,\N
+10618125,431,16530607,PROCESS_OF,C0021368,Inflammation,patf,1,C0030705,Patients,humn,0,\N,\N,\N
