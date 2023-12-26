@@ -15,9 +15,6 @@
 
 <!---->
 
-[![Python Version](https://img.shields.io/badge/Python-3.10-E6E6FA)](https://www.python.org/downloads/release/python-3100/)
-[![Pandas Version](https://img.shields.io/badge/Pandas-Latest-E6E6FA)](https://pandas.pydata.org/)
-[![NumPy Version](https://img.shields.io/badge/NumPy-Latest-E6E6FA)](https://numpy.org/)
 [![LLama-CPP Version](https://img.shields.io/badge/LLama--CPP-0.1.78-E6E6FA)](https://github.com/llama-ai/llama-cpp)
 [![Hugging Face Hub](https://img.shields.io/badge/Hugging%20Face%20Hub-0.0.12-E6E6FA)](https://huggingface.co/)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=KoslickiLab_LLMFactCheck&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=KoslickiLab_LLMFactCheck)
