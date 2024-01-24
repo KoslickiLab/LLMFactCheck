@@ -115,15 +115,18 @@ The evaluation of model accuracies has provided the following insights:
 
 | Model                 | Dataset Type          | Accuracy |
 |-----------------------|-----------------------|---------:|
-| Llama                 | Test                  |    44%   |
+| Llama                 | test size = 0.3       |    44%   |
 | Llama                 | All Labeled           |    49%   |
-| GPT-3.5 Turbo         | Test (Standard)       |    64%   |
+| Llama-2-7B-GGUF       | test size = 0.3       |    71%   |
+| GPT-3.5 Turbo         | test size = 0.3       |    64%   |
 | GPT-3.5 Turbo         | All Labeled (Standard)|    58%   |
-| GPT-3.5 Turbo (ICL)   | Test                  |    73%   |
-| GPT-4.0               | Test (Standard)       |    48%   |
+| GPT-3.5 Turbo (ICL)   | test size = 0.3       |    73%   |
+| GPT-4.0               | test size = 0.3       |    48%   |
 | GPT-4.0               | All Labeled (Standard)|    59%   |
-| GPT-4.0 (ICL)         | Test                  |    73%   |
+| GPT-4.0 (ICL)         | test size = 0.3       |    73%   |
 
+
+>Llama-2-7B-GGUF - test size = 0.3
 - **Llama Model Accuracy**:
   - On the test dataset: 44%
   - On the all labeled dataset: 49%
