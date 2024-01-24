@@ -62,6 +62,14 @@ The accuracy results are visually represented through pie charts for both standa
     <figcaption>Llama Model Accuracy on All Labeled Dataset</figcaption>
     <img src="./img/llama_accuracy_on_all_labeled_df.png" alt="Llama model accuracy on all labeled dataset" style="width: 100%; max-width: 400px;">
   </figure>
+  <h3 style="text-align: center">Llama-2-7B-GGUF - test size = 0.3</h3>
+<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+  <!-- Llama Model Accuracy -->
+  <figure style="text-align: center; border: 1px solid lightgrey; padding: 10px;">
+    <figcaption>Llama Model Accuracy on Test Dataset</figcaption>
+    <img src="./img/llama_7B_0.3_icl.png" alt="Llama model accuracy on test dataset" style="width: 100%; max-width: 400px;">
+  </figure>
+</div>
 
   <!-- GPT-3.5 Turbo Model Accuracy -->
   <figure style="text-align: center; border: 1px solid lightgrey; padding: 10px;">
