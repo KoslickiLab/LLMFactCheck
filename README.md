@@ -1,14 +1,11 @@
-
 <div align="center">
   <img src="./img/project_logo.jpg" alt="Project Image">
 <p>
 
 [//]: # ([![GitHub Workflow Status]&#40;https://img.shields.io/github/actions/workflow/status/KoslickiLab/LLMFactCheck/runTest.yml&#41;]&#40;https://github.com/KoslickiLab/LLMFactCheck/actions&#41;)
-
 [//]: # ([![codecov]&#40;https://codecov.io/gh/KoslickiLab/LLMFactCheck/graph/badge.svg?token=AZD6LBFR5P&#41;]&#40;https://codecov.io/gh/KoslickiLab/LLMFactCheck&#41;)
 
 [//]: # ([![Quality Gate Status]&#40;https://sonarcloud.io/api/project_badges/measure?project=KoslickiLab_LLMFactCheck&metric=alert_status&#41;]&#40;https://sonarcloud.io/summary/new_code?id=KoslickiLab_LLMFactCheck&#41;)
-
 [//]: # ([![CodeQL]&#40;https://github.com/MichaelCurrin/badge-generator/workflows/CodeQL/badge.svg&#41;]&#40;https://github.com/KoslickiLab/LLMFactCheck/actions?query=workflow%3ACodeQL "Code quality workflow status"&#41;)
 
 [//]: # ([![License: MIT]&#40;https://img.shields.io/badge/License-MIT-green.svg&#41;]&#40;https://github.com/KoslickiLab/LLMFactCheck/blob/main/LICENSE.txt&#41;)
@@ -53,17 +50,23 @@ To run the LLMFactCheck tool, follow these steps to set up the necessary Conda e
    git clone https://github.com/KoslickiLab/LLMFactCheck.git
    cd LLMFactCheck
    
-3. Setup the environment for LLMFactCheck by running the setup script:
+3. Create a Conda environment (if you haven't already):
 
    ```bash
-   bash setup.sh
+   conda env create -f ./env/LLMFactCheck.yml
+
+4. If you already had a Conda environment for this project and want to update it with new dependencies, execute the conda env update command with the updated environment file. Navigate to the root of your LLMFactCheck project and run the following command:
+
+   ```bash
+   conda env update -f env/LLMFactCheck.yml
    
-4. Activate the Conda environment:
+5. Activate the Conda environment:
 
    ```bash
     conda activate myLLMFactCheck
    
-5. Create a config folder in the root of the project, create the file openai_api_key.py with the following contents:
+
+6. Create a `config` folder in the root of the project, create the file `key.py` with the following contents:
 OPENAI_API_KEY = 'your-openai-api-key'
 
 # Usage (Run LLMFactCheck) 💡 
@@ -97,6 +100,7 @@ For GPT-4_0 model:
 <!---->
    ```bash
    python main.py --model gpt_4_0 --triple_file semmed_triple_data.csv --sentence_file semmed_sentence_data.csv
+   ```
 For GPT-4_0 model with icl: 
 <!---->
    ```bash
