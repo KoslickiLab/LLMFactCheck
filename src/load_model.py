@@ -27,8 +27,8 @@ def load_model(model_type, use_icl):
     """
     if model_type == 'llama':
         # Load a Llama model
-        model_name = "TheBloke/Llama-2-13B-chat-GGML"
-        model_path = hf_hub_download(repo_id=model_name, filename="llama-2-13b-chat.ggmlv3.q5_1.bin")
+        model_name = "TheBloke/Llama-2-7B-GGUF"
+        model_path = hf_hub_download(repo_id=model_name, filename="llama-2-7b.Q4_K_M.gguf")
         model = Llama(model_path=model_path, n_threads=2, n_batch=512, n_gpu_layers=32)
         if use_icl:
             return prepare_icl(model, model_type)
@@ -60,8 +60,17 @@ def prepare_icl(model, model_type):
 
     """
     df = pd.read_csv(file_path)
-    train_df, test_df = train_test_split(df, test_size=0.3, random_state=42)
-    test_df.to_csv(os.path.join('data', f'test_df_{model_type}_icl.csv'), index=False)
+
+    if not os.path.exists(os.path.join('data', f'test_df_{model_type}_icl.csv')) or \
+            not os.path.exists(os.path.join('data', f'train_df_{model_type}_icl.csv')):
+
+        train_df, test_df = train_test_split(df, test_size=0.7, random_state=42)
+
+        test_df.to_csv(os.path.join('data', f'test_df_{model_type}_icl.csv'), index=False)
+        train_df.to_csv(os.path.join('data', f'train_df_{model_type}_icl.csv'), index=False)
+    else:
+        train_df = pd.read_csv(os.path.join('data', f'train_df_{model_type}_icl.csv'))
+
     context_entries = train_df.sample(n=10)
 
     context = context_entries.apply(
