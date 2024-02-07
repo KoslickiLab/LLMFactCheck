@@ -1,6 +1,6 @@
 import os
 from openai import OpenAI
-from config.key import OPENAI_API_KEY
+from config import OPENAI_API_KEY
 from llama_cpp import Llama
 from huggingface_hub import hf_hub_download
 from sklearn.model_selection import train_test_split

@@ -13,6 +13,6 @@ dependencies:
   - pytest-mock
   - pip
   - pip:
-    - llama-cpp-python==0.1.78
+    - llama-cpp-python
     - huggingface-hub
     - openai

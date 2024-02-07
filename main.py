@@ -1,6 +1,6 @@
 import os
 import argparse
-from config.key import OPENAI_API_KEY
+from config import OPENAI_API_KEY
 from src.data_processing import read_data_from_files
 from src.load_model import load_model
 from src.processing import process_data
