@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 
 # Define the file path to the CSV data
-file_path = os.path.join('data', 'human_labeled_semmed.csv')
+file_path = os.path.join('data', 'true_false_chembl_labeled.csv')
 
 
 def load_model(model_type, use_icl):
@@ -29,7 +29,7 @@ def load_model(model_type, use_icl):
         # Load a Llama model
         model_name = "TheBloke/Llama-2-7B-GGUF"
         model_path = hf_hub_download(repo_id=model_name, filename="llama-2-7b.Q4_K_M.gguf")
-        model = Llama(model_path=model_path, n_threads=2, n_batch=512, n_gpu_layers=32)
+        model = Llama(model_path=model_path, n_threads=1000, n_batch=5120, n_gpu_layers=640, n=128, mlock=True)
         if use_icl:
             return prepare_icl(model, model_type)
         return model
@@ -64,7 +64,7 @@ def prepare_icl(model, model_type):
     if not os.path.exists(os.path.join('data', f'test_df_{model_type}_icl.csv')) or \
             not os.path.exists(os.path.join('data', f'train_df_{model_type}_icl.csv')):
 
-        train_df, test_df = train_test_split(df, test_size=0.7, random_state=42)
+        train_df, test_df = train_test_split(df, test_size=0.8, random_state=42)
 
         test_df.to_csv(os.path.join('data', f'test_df_{model_type}_icl.csv'), index=False)
         train_df.to_csv(os.path.join('data', f'train_df_{model_type}_icl.csv'), index=False)
