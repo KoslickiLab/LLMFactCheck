@@ -10,14 +10,19 @@ def create_csvs(json_path: str, name: str):
                             "SECTION_HEADER", "NORMALIZED_SECTION_HEADER", "Column", "Column"]
         sentence_records = []
 
+        labeled_columns = ["Predicate ID", "Triple", "Sentence ID", "Sentence", "Question", "Label",
+                            "Reference"]
+        labeled_records = []
+                    #Predicate ID,Triple,Sentence ID,Sentence,Question,Label,Reference
+
         triple_columns = ["PREDICATION_ID", "SENTENCE_ID", "PMID", "PREDICATE",
                           "SUBJECT_CUI", "SUBJECT_NAME", "SUBJECT_SEMTYPE", "SUBJECT_NOVELTY",
                           "OBJECT_CUI", "OBJECT_NAME", "OBJECT_SEMTYPE", "OBJECT_NOVELTY",
                           "Column", "Column", "Column"]
         triple_records = []
-
+        sentence_id = 1000
         for item in data:
-            segments = item['p2']['segments'][0]
+            segments = item['p3']['segments'][0]
 
             subject_data = segments['end']['properties']
             object_data = segments['start']['properties']
@@ -26,10 +31,22 @@ def create_csvs(json_path: str, name: str):
             subject_name = subject_data['name']
             object_name = object_data['name']
             predicate = predicate_data['predicate'].split('biolink:', 1)[1].replace('_', ' ')
-            sentence = subject_data['description']
-            sentence_id = segments['end']['identity']
+            sentence = eval(predicate_data['publications_info'])
+            print(sentence)
+            sentence= sentence[list(sentence.keys())[0]]["sentence"]
+            print(sentence)
+            sentence_id = sentence_id+1
             predicate_id = predicate_data['id']
 
+            labeled_records.append({
+                "Predicate ID": predicate_id,
+                "Triple": f"{subject_name} {predicate} {object_name}",
+                "Sentence ID": sentence_id,
+                "Sentence": sentence,
+                "Question": f"Is the triple \"{subject_name} {predicate} {object_name}\" supported by the sentence: \"{sentence}\"?",
+                "Label": True,
+                "Reference": None
+            })
             sentence_records.append({
                 "SENTENCE_ID": sentence_id,
                 "PMID": None,
@@ -60,12 +77,13 @@ def create_csvs(json_path: str, name: str):
                 "Column": None,
                 "Column": None
             })
-
+        labeled_records_df=pd.DataFrame(labeled_records, columns=labeled_columns)
         sentence_df = pd.DataFrame(sentence_records, columns=sentence_columns)
         triple_df = pd.DataFrame(triple_records, columns=triple_columns)
 
+        labeled_records_df.to_csv(f"{name}_labeled_records.csv", index=False)
         sentence_df.to_csv(f"{name}_sentence_data.csv", index=False)
         triple_df.to_csv(f"{name}_triple_data.csv", index=False)
 
 
-create_csvs('~\neo4j_false.json', 'false')
+create_csvs('/neo4j.json', 'true')
