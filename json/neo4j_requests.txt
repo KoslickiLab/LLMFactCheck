@@ -1,13 +1,11 @@
 true:
 
 match p=(n)-[r]-(m) where r.primary_knowledge_source="infores:chembl"
-with n as n, m as m, r as r
-match p2=(n)-[r2]-(m) where r2.primary_knowledge_source="infores:semmeddb" and length(r2.publications_info)>2
-return type(r), type(r2), r2.publications_info limit 5
+match p3=(n)-[r2]-(m) where r2.primary_knowledge_source="infores:semmeddb"
+return p3 limit 1000
 
 false:
 
-match p2=(n)-[r2]-(m) where r2.primary_knowledge_source="infores:semmeddb" and length(r2.publications_info)>2 and type(r2)="biolink:causes"
-with n as n, r2 as r2, m as m
-match (n)-[r]-(m) where type(r)="biolink:treats" and r2.primary_knowledge_source<>r.primary_knowledge_source
-return type(r), r.primary_knowledge_source, type(r2), r2.primary_knowledge_source limit 5
+match p2=(n)-[r2]-(m) where type(r2)="biolink:causes"
+match p3=(n)-[r]-(m) where type(r)="biolink:treats" and r.primary_knowledge_source="infores:semmeddb"
+return p3 limit 1000
