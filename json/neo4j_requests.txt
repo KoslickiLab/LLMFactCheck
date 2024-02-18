@@ -1,12 +1,12 @@
 true:
 
 match p=(n)-[r]-(m) where r.primary_knowledge_source="infores:chembl"
-with n as n, r2 as r2, m as m
+with n as n, m as m, r as r
 match p3=(n)-[r2]-(m) where r2.primary_knowledge_source="infores:semmeddb"
-return p3 limit 1000
+return p3 limit 50
 
 false:
 
-match p3=(n)-[r]-(m) where type(r)="biolink:treats" and r.primary_knowledge_source="infores:semmeddb"
-return p3 limit 1000
-{change treats to causes}
+match p3=(n)-[r]-(m) where type(r)="biolink:causes" and r.primary_knowledge_source="infores:semmeddb"
+return p3 limit 50
+{change causes to treats }
