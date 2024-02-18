@@ -20,7 +20,7 @@ def create_prompt(triple_text, sentence, context=""):
         Returns:
             str: The constructed prompt.
     """
-    return f"{context}'Is the triple \"{triple_text}\" supported by the sentence: \"{sentence}\"?"
+    return f"'Is the triple \"{triple_text}\" supported by the sentence: \"{sentence}\"?"
 
 
 def process_data(model_info, model_type, use_icl, triple_data: pd.DataFrame, sentence_data: pd.DataFrame,
@@ -66,6 +66,8 @@ def process_triple(model_info, sentence_id, sentence, triple,
                    progress, console_results_writer, model_key, use_icl, _):
 
     triple_sentence_id, predicate_id, triple_text = triple
+    import time
+    time.sleep(5) # Sleep for 3 seconds
     if (triple_sentence_id, predicate_id) not in progress:
         prompt = create_prompt(triple_text, sentence, model_info[1] if use_icl else "")
         result = get_result(model_info, prompt, model_key)

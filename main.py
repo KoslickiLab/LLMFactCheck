@@ -4,6 +4,8 @@ from config import OPENAI_API_KEY
 from src.data_processing import read_data_from_files
 from src.load_model import load_model
 from src.processing import process_data
+import debugpy
+debugpy.listen(('localhost', 5678))
 
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
@@ -25,7 +27,6 @@ def main() -> None:
     parser.add_argument("--triple_file", required=True, help="Path to the SemMedDB triple file")
     parser.add_argument("--sentence_file", required=True, help="Path to the SemMedDB sentence file")
     args = parser.parse_args()
-
     triple_data, sentence_data = read_data_from_files(args.triple_file, args.sentence_file)
 
     model_info = load_model(args.model, args.icl)
