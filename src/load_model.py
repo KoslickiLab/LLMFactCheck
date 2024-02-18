@@ -27,8 +27,8 @@ def load_model(model_type, use_icl):
     """
     if model_type == 'llama':
         # Load a Llama model
-        model_name = "TheBloke/Llama-2-13B-chat-GGML"
-        model_path = hf_hub_download(repo_id=model_name, filename="llama-2-13b-chat.ggmlv3.q5_1.bin")
+        model_name = "TheBloke/CodeLlama-70B-Python-GGUF"
+        model_path = hf_hub_download(repo_id=model_name, filename="codellama-70b-python.Q2_K.gguf")
         model = Llama(model_path=model_path, n_threads=10, n_batch=512, n_gpu_layers=64, n=128, mlock=True)
         if use_icl:
             return prepare_icl(model, model_type)
