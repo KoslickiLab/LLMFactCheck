@@ -30,6 +30,7 @@ def get_result(model_info, prompt, model_type):
 
         ASSISTANT:
         '''
+        prompt_template=prompt
         prompt_chunks = [prompt_template]
         result_text = ""
         for chunk in prompt_chunks:
