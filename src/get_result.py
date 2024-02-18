@@ -24,7 +24,7 @@ def get_result(model_info, prompt, model_type):
             model = model_info
             full_prompt = prompt
         prompt = full_prompt
-        prompt_template=f'''SYSTEM: Read carefully the triple and the sentense and nswer only Yes or No.
+        prompt_template=f'''SYSTEM: Read carefully the triple and the sentense and answer only Yes or No.
 
 USER: {prompt}
 
