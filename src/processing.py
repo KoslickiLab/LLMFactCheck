@@ -20,7 +20,7 @@ def create_prompt(triple_text, sentence, context=""):
         Returns:
             str: The constructed prompt.
     """
-    return f"'Is the statement \"{triple_text}\" supported by the sentence: \"{sentence}\"?"
+    return f"'\"{triple_text}\" concludes from \"{sentence}\"?"
 
 
 def process_data(model_info, model_type, use_icl, triple_data: pd.DataFrame, sentence_data: pd.DataFrame,
