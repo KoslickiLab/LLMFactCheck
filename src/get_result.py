@@ -23,17 +23,14 @@ def get_result(model_info, prompt, model_type):
             # If using a standalone Llama model
             model = model_info
             full_prompt = prompt
-        prompt = full_prompt
-        prompt_template='''{prompt}'''
-        prompt_chunks = [prompt_template]
-        result_text = ""
-        for chunk in prompt_chunks:
+
+        
             # Interact with the Llama model
-            print(chunk)
-            response = model(prompt=chunk, max_tokens=256, temperature=0.5,
+        print(full_prompt)
+        response = model(prompt=full_prompt, max_tokens=256, temperature=0.5,
                              top_p=0.95, repeat_penalty=1.2, top_k=150, echo=True)
-            result_text += response["choices"][0]["text"]
-            print(result_text)
+        result_text += response["choices"][0]["text"]
+        print(result_text)
         return result_text
 
     else:
