@@ -24,7 +24,7 @@ def get_result(model_info, prompt, model_type):
             model = model_info
             full_prompt = prompt
         prompt = full_prompt
-        prompt_template=f'''{prompt} Answer yes or no.'''
+        prompt_template=f'''{prompt}. System: Answer  or no.'''
         prompt_chunks = [prompt_template]
         result_text = ""
         for chunk in prompt_chunks:
