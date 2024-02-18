@@ -24,13 +24,13 @@ def get_result(model_info, prompt, model_type):
             model = model_info
             full_prompt = prompt
         prompt = full_prompt
-        prompt_template=f'''SYSTEM: You are scientist. Read carefully and answer only yes or no.
-CONTEXT: {context}
-            
-USER: {prompt}
+        prompt_template=f'''SYSTEM: You are scientist. Read carefully and answer only yes or no.            
 
-ASSISTANT:
-'''
+        USER: {prompt}
+
+        ASSISTANT:
+
+        '''
         prompt_chunks = [prompt_template]
         result_text = ""
         for chunk in prompt_chunks:
