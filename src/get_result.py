@@ -23,7 +23,7 @@ def get_result(model_info, prompt, model_type):
             # If using a standalone Llama model
             model = model_info
             full_prompt = prompt
-        prompt = full_prompt[3:]
+        prompt = full_prompt
         prompt_template=f'''SYSTEM: You are scientist. Read carefully and answer only yes or no.
         
 USER: {prompt}
