@@ -29,7 +29,7 @@ def load_model(model_type, use_icl):
         # Load a Llama model
         model_name = "TheBloke/Llama-2-70B-Chat-GGUF"
         model_path = hf_hub_download(repo_id=model_name, filename="llama-2-70b-chat.Q4_K_M.gguf")
-        model = Llama(model_path=model_path, n_threads=10, n_batch=512, n_gpu_layers=64, n=128, mlock=True)
+        model = Llama(model_path=model_path, n_threads=2, n_batch=512, n_gpu_layers=128, n=128, mlock=True)
         if use_icl:
             return prepare_icl(model, model_type)
         return model
