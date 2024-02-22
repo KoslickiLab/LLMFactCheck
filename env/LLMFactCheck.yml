@@ -3,16 +3,16 @@ channels:
   - nvidia
   - defaults
 dependencies:
-  - python
-  - pandas
-  - numpy
-  - matplotlib
-  - pytest
-  - pytest-cov
-  - pytest-mock
   - cuda-toolkit
   - pip
   - pip:
+    - python
+    - pandas
+    - numpy
+    - matplotlib
+    - pytest
+    - pytest-cov
+    - pytest-mock
     - llama-cpp-python 
     - huggingface-hub
    
