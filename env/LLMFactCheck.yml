@@ -12,6 +12,7 @@ dependencies:
   - pytest-cov
   - pytest-mock
   - pip
+  - nvidia::cuda-toolkit
   - pip:
     - llama-cpp-python
     - huggingface-hub

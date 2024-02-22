@@ -1,6 +1,4 @@
-from numba import jit, cuda
-# function optimized to run on gpu 
-@jit(target_backend='cuda')  
+
 def get_result(model_info, prompt, model_type):
     """
     Get a result from a specified model.
@@ -27,7 +25,7 @@ def get_result(model_info, prompt, model_type):
             model = model_info
             full_prompt = prompt
         prompt = full_prompt
-        prompt_template=f'''SYSTEM: You are scientist. Read carefully and answer only yes or no.            
+        prompt_template=f'''SYSTEM: You are a computational biologist. Please read the statement below with attention to detail. Respond with "yes" or "no" only, based on your expertise in computational biology.            
 
         USER: {prompt}
 
