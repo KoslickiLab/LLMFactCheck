@@ -3,10 +3,10 @@ channels:
   - nvidia
   - defaults
 dependencies:
+  - python
   - cuda-toolkit
   - pip
   - pip:
-    - python
     - pandas
     - numpy
     - matplotlib
