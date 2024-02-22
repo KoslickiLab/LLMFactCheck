@@ -16,3 +16,5 @@ dependencies:
     - llama-cpp-python
     - huggingface-hub
     - openai
+    - numba
+    - cudatoolkit
