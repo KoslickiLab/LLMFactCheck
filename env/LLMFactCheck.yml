@@ -14,5 +14,5 @@ dependencies:
   - pip
   - nvidia::cuda-toolkit
   - pip:
-    - llama-cpp-python
+    - llama-cpp-python --force-reinstall --upgrade --no-cache-dir --verbose
     - huggingface-hub
