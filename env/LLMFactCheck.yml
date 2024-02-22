@@ -12,6 +12,6 @@ dependencies:
     - pytest-cov
     - pytest-mock
     - cudatoolkit
-    - llama-cpp-python --force-reinstall --upgrade --no-cache-dir --verbose
+    - llama-cpp-python
     - huggingface-hub
    
