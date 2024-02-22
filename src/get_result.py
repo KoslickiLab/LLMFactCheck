@@ -1,3 +1,6 @@
+from numba import jit, cuda
+# function optimized to run on gpu 
+@jit(target_backend='cuda')  
 def get_result(model_info, prompt, model_type):
     """
     Get a result from a specified model.

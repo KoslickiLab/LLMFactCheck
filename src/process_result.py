@@ -1,9 +1,7 @@
 import re
 from typing import Tuple
 
-from numba import jit, cuda
-# function optimized to run on gpu 
-@jit(target_backend='cuda')  
+
 def process_result(result: str) -> Tuple[str, str]:
     """
     Process a result string to extract the answer and determine its correctness.
