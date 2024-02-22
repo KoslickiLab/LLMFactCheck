@@ -3,15 +3,15 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python
-  - pandas
-  - numpy
-  - matplotlib
-  - pytest
-  - pytest-cov
-  - pytest-mock
   - pip
   - pip:
+    - python
+    - pandas
+    - numpy
+    - matplotlib
+    - pytest
+    - pytest-cov
+    - pytest-mock
     - cudatoolkit
     - llama-cpp-python --force-reinstall --upgrade --no-cache-dir --verbose
     - huggingface-hub
