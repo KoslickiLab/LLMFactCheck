@@ -1,6 +1,5 @@
 name: myLLMFactCheck
 channels:
-  - conda-forge
   - defaults
 dependencies:
   - pip
