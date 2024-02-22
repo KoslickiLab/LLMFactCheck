@@ -1,18 +1,18 @@
 name: myLLMFactCheck
 channels:
+  - nvidia
   - defaults
 dependencies:
   - python
+  - pandas
+  - numpy
+  - matplotlib
+  - pytest
+  - pytest-cov
+  - pytest-mock
+  - cuda-toolkit
   - pip
   - pip:
-
-    - pandas
-    - numpy
-    - matplotlib
-    - pytest
-    - pytest-cov
-    - pytest-mock
-    - cudatoolkit
-    - llama-cpp-python
+    - llama-cpp-python 
     - huggingface-hub
    
