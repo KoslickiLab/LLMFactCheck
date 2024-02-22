@@ -2,9 +2,10 @@ name: myLLMFactCheck
 channels:
   - defaults
 dependencies:
+  - python
   - pip
   - pip:
-    - python
+
     - pandas
     - numpy
     - matplotlib
