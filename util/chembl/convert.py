@@ -20,7 +20,7 @@ def create_csvs(json_path: str, name: str):
                           "OBJECT_CUI", "OBJECT_NAME", "OBJECT_SEMTYPE", "OBJECT_NOVELTY",
                           "Column", "Column", "Column"]
         triple_records = []
-        sentence_id = 1000
+        sentence_id = 1
         for item in data:
             segments = item['p3']['segments'][0]
 
@@ -44,7 +44,7 @@ def create_csvs(json_path: str, name: str):
                 "Sentence ID": sentence_id,
                 "Sentence": sentence,
                 "Question": f"Is the triple \"{subject_name} {predicate} {object_name}\" supported by the sentence: \"{sentence}\"?",
-                "Label": True,
+                "Label": False,
                 "Reference": None
             })
             sentence_records.append({
@@ -86,4 +86,4 @@ def create_csvs(json_path: str, name: str):
         triple_df.to_csv(f"{name}_triple_data.csv", index=False)
 
 
-create_csvs('json/neo4j.json', 'true')
+create_csvs('json/neo4j_false.json', 'false')
