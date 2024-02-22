@@ -16,6 +16,3 @@ dependencies:
   - pip:
     - llama-cpp-python
     - huggingface-hub
-    - openai
-    - numba
-    - cudatoolkit

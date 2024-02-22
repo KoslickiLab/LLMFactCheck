@@ -25,7 +25,7 @@ def get_result(model_info, prompt, model_type):
             model = model_info
             full_prompt = prompt
         prompt = full_prompt
-        prompt_template=f'''SYSTEM: You are a computational biologist. Please read the statement below with attention to detail. Respond with "yes" or "no" only, based on your expertise in computational biology.            
+        prompt_template=f'''SYSTEM: You are scientist. Read carefully and answer only yes or no.            
 
         USER: {prompt}
 
