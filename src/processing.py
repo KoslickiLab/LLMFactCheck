@@ -22,7 +22,9 @@ def create_prompt(triple_text, sentence, context=""):
     """
     return f"'Is the tripple \"{triple_text}\" directly or indirectly supported by the sentence: \"{sentence}\"?"
 
-
+from numba import jit, cuda
+# function optimized to run on gpu 
+@jit(target_backend='cuda')   
 def process_data(model_info, model_type, use_icl, triple_data: pd.DataFrame, sentence_data: pd.DataFrame,
                  result_file: str, progress_file_path: str):
     print("Initializing data processing...")

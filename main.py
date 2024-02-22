@@ -7,7 +7,7 @@ from src.processing import process_data
 import debugpy
 #debugpy.listen(('localhost', 5678))
  
-from numba import jit, cuda
+
 import numpy as np
 # to measure exec time
 from timeit import default_timer as timer  
@@ -17,8 +17,7 @@ os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 result_folder = "result"
 progress_folder = "progress"
 
-# function optimized to run on gpu 
-@jit(target_backend='cuda')    
+ 
 def main() -> None:
     """
     Main function to run the Fact-Checking App.
