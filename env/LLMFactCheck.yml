@@ -6,13 +6,13 @@ dependencies:
   - python
   - pandas
   - numpy
-  - scikit-learn
   - matplotlib
   - pytest
   - pytest-cov
   - pytest-mock
   - pip
-  - nvidia::cuda-toolkit
   - pip:
+    - cudatoolkit
     - llama-cpp-python --force-reinstall --upgrade --no-cache-dir --verbose
     - huggingface-hub
+   
