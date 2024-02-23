@@ -13,7 +13,7 @@ dependencies:
     - pytest
     - pytest-cov
     - pytest-mock
-    - llama-cpp-python 
+    - "--verbose llama-cpp-python" 
     - huggingface-hub
     - openai
     - scikit-learn
