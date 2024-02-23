@@ -15,4 +15,5 @@ dependencies:
     - pytest-mock
     - llama-cpp-python 
     - huggingface-hub
+    - openai
    
