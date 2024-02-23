@@ -17,4 +17,5 @@ dependencies:
     - huggingface-hub
     - openai
     - scikit-learn
+    - debugpy
    
