@@ -8,10 +8,9 @@ return p3 limit 5
 
 false:
 
-match p=(n)-[r]-(m) where r.primary_knowledge_source="infores:chembl"
+match p=(n)-[r:`biolink:treats`]-(m) where r.primary_knowledge_source="infores:chembl"
 with n as n, m as m, r as r
-match p3=(n)-[r2]-(m) where r2.primary_knowledge_source="infores:semmeddb"
-AND type(r)<>type(r2)
-return p3 limit 5
+match p3=(n)-[r2:`biolink:causes`]-(m) where r2.primary_knowledge_source="infores:semmeddb"
+return p3 limit 50
 
 {change causes to treats}
