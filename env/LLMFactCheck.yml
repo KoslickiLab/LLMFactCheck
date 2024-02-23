@@ -16,4 +16,5 @@ dependencies:
     - llama-cpp-python 
     - huggingface-hub
     - openai
+    - scikit-learn
    
