@@ -41,7 +41,7 @@ def create_csvs(json_path: str, name: str):
             labeled_records.append({
                 "Predicate ID": predicate_id,
                 "Triple": f"{subject_name} {predicate} {object_name}",
-                "Sentence ID": sentence_id,
+                "Sentence ID": sentence_id+1,
                 "Sentence": sentence,
                 "Question": f"Is the triple \"{subject_name} {predicate} {object_name}\" supported by the sentence: \"{sentence}\"?",
                 "Label": False,
@@ -62,7 +62,7 @@ def create_csvs(json_path: str, name: str):
 
             triple_records.append({
                 "PREDICATION_ID": predicate_id,
-                "SENTENCE_ID": sentence_id,
+                "SENTENCE_ID": sentence_id+1,
                 "PMID": None,
                 "PREDICATE": predicate,
                 "SUBJECT_CUI": None,

@@ -117,12 +117,12 @@
           "start": {
             "identity": 526500,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0004664",
@@ -183,19 +183,19 @@
           "end": {
             "identity": 546,
             "labels": [
-              "biolink:ChemicalEntity",
+              "biolink:SmallMolecule",
               "biolink:ChemicalEntityOrGeneOrGeneProduct",
-              "biolink:ChemicalEntityOrProteinOrPolypeptide",
-              "biolink:ChemicalMixture",
-              "biolink:ChemicalOrDrugOrTreatment",
-              "biolink:Drug",
-              "biolink:MolecularEntity",
-              "biolink:MolecularMixture",
-              "biolink:NamedThing",
-              "biolink:OntologyClass",
-              "biolink:PhysicalEssence",
               "biolink:PhysicalEssenceOrOccurrent",
-              "biolink:SmallMolecule"
+              "biolink:MolecularEntity",
+              "biolink:ChemicalEntity",
+              "biolink:ChemicalMixture",
+              "biolink:Drug",
+              "biolink:ChemicalOrDrugOrTreatment",
+              "biolink:NamedThing",
+              "biolink:PhysicalEssence",
+              "biolink:ChemicalEntityOrProteinOrPolypeptide",
+              "biolink:MolecularMixture",
+              "biolink:OntologyClass"
             ],
             "properties": {
               "name": "Fenbendazole",
@@ -440,19 +440,19 @@
           "end": {
             "identity": 551,
             "labels": [
-              "biolink:ChemicalEntity",
+              "biolink:SmallMolecule",
               "biolink:ChemicalEntityOrGeneOrGeneProduct",
-              "biolink:ChemicalEntityOrProteinOrPolypeptide",
-              "biolink:ChemicalMixture",
-              "biolink:ChemicalOrDrugOrTreatment",
-              "biolink:Drug",
-              "biolink:MolecularEntity",
-              "biolink:MolecularMixture",
-              "biolink:NamedThing",
-              "biolink:OntologyClass",
-              "biolink:PhysicalEssence",
               "biolink:PhysicalEssenceOrOccurrent",
-              "biolink:SmallMolecule"
+              "biolink:MolecularEntity",
+              "biolink:ChemicalEntity",
+              "biolink:ChemicalMixture",
+              "biolink:Drug",
+              "biolink:ChemicalOrDrugOrTreatment",
+              "biolink:NamedThing",
+              "biolink:PhysicalEssence",
+              "biolink:ChemicalEntityOrProteinOrPolypeptide",
+              "biolink:MolecularMixture",
+              "biolink:OntologyClass"
             ],
             "properties": {
               "name": "Albendazole",
@@ -639,12 +639,12 @@
           "start": {
             "identity": 317818,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0011827",
@@ -704,19 +704,19 @@
           "end": {
             "identity": 554,
             "labels": [
-              "biolink:ChemicalEntity",
+              "biolink:SmallMolecule",
               "biolink:ChemicalEntityOrGeneOrGeneProduct",
-              "biolink:ChemicalEntityOrProteinOrPolypeptide",
-              "biolink:ChemicalMixture",
-              "biolink:ChemicalOrDrugOrTreatment",
-              "biolink:Drug",
-              "biolink:MolecularEntity",
-              "biolink:MolecularMixture",
-              "biolink:NamedThing",
-              "biolink:OntologyClass",
-              "biolink:PhysicalEssence",
               "biolink:PhysicalEssenceOrOccurrent",
-              "biolink:SmallMolecule"
+              "biolink:MolecularEntity",
+              "biolink:ChemicalEntity",
+              "biolink:ChemicalMixture",
+              "biolink:Drug",
+              "biolink:ChemicalOrDrugOrTreatment",
+              "biolink:NamedThing",
+              "biolink:PhysicalEssence",
+              "biolink:ChemicalEntityOrProteinOrPolypeptide",
+              "biolink:MolecularMixture",
+              "biolink:OntologyClass"
             ],
             "properties": {
               "name": "Ibuprofen",
@@ -929,12 +929,12 @@
           "start": {
             "identity": 307306,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0004975",
@@ -1231,12 +1231,12 @@
           "start": {
             "identity": 316638,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0004247",
@@ -1516,12 +1516,12 @@
           "start": {
             "identity": 212250,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/HP_0001945",
@@ -1790,12 +1790,12 @@
           "start": {
             "identity": 317183,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0004982",
@@ -2056,12 +2056,12 @@
           "start": {
             "identity": 630575,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "https://identifiers.org/ncit:C78640",
@@ -2336,12 +2336,12 @@
           "start": {
             "identity": 319500,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0100130",
@@ -2620,12 +2620,12 @@
           "start": {
             "identity": 316891,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/HP_0012531",
@@ -2890,12 +2890,12 @@
           "start": {
             "identity": 543282,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "https://identifiers.org/ncit:C26791",
@@ -3179,12 +3179,12 @@
           "start": {
             "identity": 307910,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005578",
@@ -3456,12 +3456,12 @@
           "start": {
             "identity": 546804,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0021178",
@@ -3722,12 +3722,12 @@
           "start": {
             "identity": 295849,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0004981",
@@ -3796,19 +3796,19 @@
           "end": {
             "identity": 557,
             "labels": [
-              "biolink:ChemicalEntity",
+              "biolink:SmallMolecule",
               "biolink:ChemicalEntityOrGeneOrGeneProduct",
-              "biolink:ChemicalEntityOrProteinOrPolypeptide",
-              "biolink:ChemicalMixture",
-              "biolink:ChemicalOrDrugOrTreatment",
-              "biolink:Drug",
-              "biolink:MolecularEntity",
-              "biolink:MolecularMixture",
-              "biolink:NamedThing",
-              "biolink:OntologyClass",
-              "biolink:PhysicalEssence",
               "biolink:PhysicalEssenceOrOccurrent",
-              "biolink:SmallMolecule"
+              "biolink:MolecularEntity",
+              "biolink:ChemicalEntity",
+              "biolink:ChemicalMixture",
+              "biolink:Drug",
+              "biolink:ChemicalOrDrugOrTreatment",
+              "biolink:NamedThing",
+              "biolink:PhysicalEssence",
+              "biolink:ChemicalEntityOrProteinOrPolypeptide",
+              "biolink:MolecularMixture",
+              "biolink:OntologyClass"
             ],
             "properties": {
               "name": "Ivabradine",
@@ -4070,19 +4070,19 @@
           "end": {
             "identity": 567,
             "labels": [
-              "biolink:ChemicalEntity",
+              "biolink:SmallMolecule",
               "biolink:ChemicalEntityOrGeneOrGeneProduct",
-              "biolink:ChemicalEntityOrProteinOrPolypeptide",
-              "biolink:ChemicalMixture",
-              "biolink:ChemicalOrDrugOrTreatment",
-              "biolink:Drug",
-              "biolink:MolecularEntity",
-              "biolink:MolecularMixture",
-              "biolink:NamedThing",
-              "biolink:OntologyClass",
-              "biolink:PhysicalEssence",
               "biolink:PhysicalEssenceOrOccurrent",
-              "biolink:SmallMolecule"
+              "biolink:MolecularEntity",
+              "biolink:ChemicalEntity",
+              "biolink:ChemicalMixture",
+              "biolink:Drug",
+              "biolink:ChemicalOrDrugOrTreatment",
+              "biolink:NamedThing",
+              "biolink:PhysicalEssence",
+              "biolink:ChemicalEntityOrProteinOrPolypeptide",
+              "biolink:MolecularMixture",
+              "biolink:OntologyClass"
             ],
             "properties": {
               "name": "Ranolazine",
@@ -4280,12 +4280,12 @@
           "start": {
             "identity": 310037,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005041",
@@ -4351,19 +4351,19 @@
           "end": {
             "identity": 568,
             "labels": [
-              "biolink:ChemicalEntity",
+              "biolink:SmallMolecule",
               "biolink:ChemicalEntityOrGeneOrGeneProduct",
-              "biolink:ChemicalEntityOrProteinOrPolypeptide",
-              "biolink:ChemicalMixture",
-              "biolink:ChemicalOrDrugOrTreatment",
-              "biolink:Drug",
-              "biolink:MolecularEntity",
-              "biolink:MolecularMixture",
-              "biolink:NamedThing",
-              "biolink:OntologyClass",
-              "biolink:PhysicalEssence",
               "biolink:PhysicalEssenceOrOccurrent",
-              "biolink:SmallMolecule"
+              "biolink:MolecularEntity",
+              "biolink:ChemicalEntity",
+              "biolink:ChemicalMixture",
+              "biolink:Drug",
+              "biolink:ChemicalOrDrugOrTreatment",
+              "biolink:NamedThing",
+              "biolink:PhysicalEssence",
+              "biolink:ChemicalEntityOrProteinOrPolypeptide",
+              "biolink:MolecularMixture",
+              "biolink:OntologyClass"
             ],
             "properties": {
               "name": "Prednisolone",
@@ -4564,12 +4564,12 @@
           "start": {
             "identity": 316847,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0020283",
@@ -4853,12 +4853,12 @@
           "start": {
             "identity": 319192,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005240",
@@ -5161,12 +5161,12 @@
           "start": {
             "identity": 130846,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005271",
@@ -5478,12 +5478,12 @@
           "start": {
             "identity": 312686,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0000004",
@@ -5790,12 +5790,12 @@
           "start": {
             "identity": 322104,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005101",
@@ -6084,12 +6084,12 @@
           "start": {
             "identity": 318533,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/HP_0002315",
@@ -6364,12 +6364,12 @@
           "start": {
             "identity": 319059,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005377",
@@ -6650,12 +6650,12 @@
           "start": {
             "identity": 311498,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005047",
@@ -6948,12 +6948,12 @@
           "start": {
             "identity": 320057,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0043233",
@@ -7237,12 +7237,12 @@
           "start": {
             "identity": 310746,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005480",
@@ -7523,12 +7523,12 @@
           "start": {
             "identity": 310720,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0006052",
@@ -7810,12 +7810,12 @@
           "start": {
             "identity": 319330,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005292",
@@ -8110,12 +8110,12 @@
           "start": {
             "identity": 316730,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005129",
@@ -8427,12 +8427,12 @@
           "start": {
             "identity": 319015,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0007915",
@@ -8740,12 +8740,12 @@
           "start": {
             "identity": 528832,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0001881",
@@ -8817,19 +8817,19 @@
           "end": {
             "identity": 569,
             "labels": [
-              "biolink:ChemicalEntity",
+              "biolink:SmallMolecule",
               "biolink:ChemicalEntityOrGeneOrGeneProduct",
-              "biolink:ChemicalEntityOrProteinOrPolypeptide",
-              "biolink:ChemicalMixture",
-              "biolink:ChemicalOrDrugOrTreatment",
-              "biolink:Drug",
-              "biolink:MolecularEntity",
-              "biolink:MolecularMixture",
-              "biolink:NamedThing",
-              "biolink:OntologyClass",
-              "biolink:PhysicalEssence",
               "biolink:PhysicalEssenceOrOccurrent",
-              "biolink:SmallMolecule"
+              "biolink:MolecularEntity",
+              "biolink:ChemicalEntity",
+              "biolink:ChemicalMixture",
+              "biolink:Drug",
+              "biolink:ChemicalOrDrugOrTreatment",
+              "biolink:NamedThing",
+              "biolink:PhysicalEssence",
+              "biolink:ChemicalEntityOrProteinOrPolypeptide",
+              "biolink:MolecularMixture",
+              "biolink:OntologyClass"
             ],
             "properties": {
               "name": "Hydrocortisone",
@@ -9042,12 +9042,12 @@
           "start": {
             "identity": 320039,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/HP_0100806",
@@ -9340,12 +9340,12 @@
           "start": {
             "identity": 313237,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0004980",
@@ -9642,12 +9642,12 @@
           "start": {
             "identity": 547810,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005546",
@@ -9956,12 +9956,12 @@
           "start": {
             "identity": 319508,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005468",
@@ -10267,12 +10267,12 @@
           "start": {
             "identity": 317312,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/HP_0012418",
@@ -10567,12 +10567,12 @@
           "start": {
             "identity": 312713,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0018479",
@@ -11147,12 +11147,12 @@
           "start": {
             "identity": 521264,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005812",
@@ -11452,12 +11452,12 @@
           "start": {
             "identity": 320151,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0011292",
@@ -11760,13 +11760,13 @@
           "start": {
             "identity": 318216,
             "labels": [
-              "biolink:BehavioralFeature",
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
               "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:BehavioralFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0011122",
@@ -12060,12 +12060,12 @@
           "start": {
             "identity": 183319,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "https://identifiers.org/ncit:C3137",
@@ -12393,13 +12393,13 @@
           "start": {
             "identity": 319995,
             "labels": [
-              "biolink:BehavioralFeature",
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
               "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:BehavioralFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0001185",
@@ -13069,12 +13069,12 @@
           "start": {
             "identity": 314857,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0004795",
@@ -13356,12 +13356,12 @@
           "start": {
             "identity": 318773,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0036591",
@@ -13653,12 +13653,12 @@
           "start": {
             "identity": 319673,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005070",
@@ -13946,12 +13946,12 @@
           "start": {
             "identity": 314596,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/HP_0000855",
@@ -14524,12 +14524,12 @@
           "start": {
             "identity": 309447,
             "labels": [
+              "biolink:NamedThing",
+              "biolink:ThingWithTaxon",
               "biolink:BiologicalEntity",
               "biolink:Disease",
               "biolink:DiseaseOrPhenotypicFeature",
-              "biolink:NamedThing",
-              "biolink:PhenotypicFeature",
-              "biolink:ThingWithTaxon"
+              "biolink:PhenotypicFeature"
             ],
             "properties": {
               "iri": "http://purl.obolibrary.org/obo/MONDO_0005556",
@@ -14592,19 +14592,19 @@
           "end": {
             "identity": 570,
             "labels": [
-              "biolink:ChemicalEntity",
+              "biolink:SmallMolecule",
               "biolink:ChemicalEntityOrGeneOrGeneProduct",
-              "biolink:ChemicalEntityOrProteinOrPolypeptide",
-              "biolink:ChemicalMixture",
-              "biolink:ChemicalOrDrugOrTreatment",
-              "biolink:Drug",
-              "biolink:MolecularEntity",
-              "biolink:MolecularMixture",
-              "biolink:NamedThing",
-              "biolink:OntologyClass",
-              "biolink:PhysicalEssence",
               "biolink:PhysicalEssenceOrOccurrent",
-              "biolink:SmallMolecule"
+              "biolink:MolecularEntity",
+              "biolink:ChemicalEntity",
+              "biolink:ChemicalMixture",
+              "biolink:Drug",
+              "biolink:ChemicalOrDrugOrTreatment",
+              "biolink:NamedThing",
+              "biolink:PhysicalEssence",
+              "biolink:ChemicalEntityOrProteinOrPolypeptide",
+              "biolink:MolecularMixture",
+              "biolink:OntologyClass"
             ],
             "properties": {
               "name": "Methylprednisolone",
