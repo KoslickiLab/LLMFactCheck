@@ -25,7 +25,7 @@ def get_result(model_info, prompt, model_type):
             model = model_info
             full_prompt = prompt
         prompt = full_prompt
-        prompt_template=f'''SYSTEM: You are computational biologist. Read carefully and please start your answer with 'Yes' or 'No' followed by a justification of why you chose that answer.            
+        prompt_template=f'''SYSTEM: As a computational biologist, your expertise is crucial in interpreting scientific statements. Please begin your response with 'Yes' or 'No', followed by a detailed explanation of your reasoning. Consider the evidence provided and any relevant scientific principles or context that may influence the accuracy and relevance of the statements in question.            
 
         USER: {prompt}
 
