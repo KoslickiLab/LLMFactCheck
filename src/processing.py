@@ -24,7 +24,7 @@ def create_prompt(triple_text, sentence, context=""):
 
  
 def process_data(model_info, model_type, use_icl, triple_data: pd.DataFrame, sentence_data: pd.DataFrame,
-                 labeled_data: pd.DataFramem, result_file: str, progress_file_path: str):
+                 labeled_data: pd.DataFrame, result_file: str, progress_file_path: str):
     print("Initializing data processing...")
 
     sentence_dict = {}
