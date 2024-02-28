@@ -4,7 +4,7 @@ from typing import Tuple, TextIO
 import pandas as pd
 
 
-def read_data_from_files(triple_file: str, sentence_file: str) -> Tuple[pd.DataFrame, pd.DataFrame]:
+def read_data_from_files(triple_file: str, sentence_file: str, labeled_dataset_file: str) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """
     Read data from specified triple and sentence files into pandas DataFrames.
 
@@ -32,7 +32,11 @@ def read_data_from_files(triple_file: str, sentence_file: str) -> Tuple[pd.DataF
         "SECTION_HEADER", "NORMALIZED_SECTION_HEADER", "Column", "Column"
     ]
     sentence_data["SENTENCE"] = sentence_data["SENTENCE"].str.strip('""')
-    return triple_data, sentence_data
+    labeled_dataset= pd.read_csv(os.path.join('data', labeled_dataset_file), delimiter=',', header=None, engine='python')
+    labeled_dataset.columns = [
+        "ID" ,"Fact", "Source", "Template", "Reference", "Name"
+    ]
+    return triple_data, sentence_data, labeled_dataset
 
 
 def initialize_writers(result_file: str, progress_file_path: str) -> Tuple[csv.writer, csv.writer, TextIO, TextIO]:

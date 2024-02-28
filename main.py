@@ -31,8 +31,9 @@ def main() -> None:
     parser.add_argument("--icl", action='store_true', help="Use In-Context Learning")
     parser.add_argument("--triple_file", required=True, help="Path to the SemMedDB triple file")
     parser.add_argument("--sentence_file", required=True, help="Path to the SemMedDB sentence file")
+    parser.add_argument("--labeled_dataset_file", required=True, help="Path to the labeled dataset")
     args = parser.parse_args()
-    triple_data, sentence_data = read_data_from_files(args.triple_file, args.sentence_file)
+    triple_data, sentence_data, labeled_data = read_data_from_files(args.triple_file, args.sentence_file, args.labeled_dataset_file)
 
     model_info = load_model(args.model, args.icl)
 
@@ -40,7 +41,7 @@ def main() -> None:
     result_file_name = f"{args.model}{icl_suffix}_semmed_result.csv"
     progress_file_name = f"{args.model}{icl_suffix}_progress.csv"
 
-    process_data(model_info, args.model, args.icl, triple_data, sentence_data,
+    process_data(model_info, args.model, args.icl, triple_data, sentence_data,labeled_data,
                  os.path.join(result_folder, result_file_name),
                  os.path.join(result_folder, progress_folder, progress_file_name))
 

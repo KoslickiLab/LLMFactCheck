@@ -20,8 +20,7 @@ def create_csvs(json_path: str, name: str):
                           "OBJECT_CUI", "OBJECT_NAME", "OBJECT_SEMTYPE", "OBJECT_NOVELTY",
                           "Column", "Column", "Column"]
         triple_records = []
-        sentence_id = 0
-        n=100
+        sentence_id = 1000
         for item in data:
             segments = item['p3']['segments'][0]
 
@@ -43,7 +42,7 @@ def create_csvs(json_path: str, name: str):
             labeled_records.append({
                 "Predicate ID": predicate_id,
                 "Triple": f"{subject_name} {predicate} {object_name}",
-                "Sentence ID": sentence_id+n,
+                "Sentence ID": sentence_id,
                 "Sentence": sentence,
                 "Question": f"Is the triple \"{subject_name} {predicate} {object_name}\" supported by the sentence: \"{sentence}\"?",
                 "Label": False,
@@ -64,7 +63,7 @@ def create_csvs(json_path: str, name: str):
 
             triple_records.append({
                 "PREDICATION_ID": predicate_id,
-                "SENTENCE_ID": sentence_id+n,
+                "SENTENCE_ID": sentence_id,
                 "PMID": None,
                 "PREDICATE": predicate,
                 "SUBJECT_CUI": None,
@@ -79,8 +78,6 @@ def create_csvs(json_path: str, name: str):
                 "Column": None,
                 "Column": None
             })
-            if sentence_id==400: 
-             n=-400
         labeled_records_df=pd.DataFrame(labeled_records, columns=labeled_columns)
         sentence_df = pd.DataFrame(sentence_records, columns=sentence_columns)
         triple_df = pd.DataFrame(triple_records, columns=triple_columns)
@@ -90,4 +87,4 @@ def create_csvs(json_path: str, name: str):
         triple_df.to_csv(f"{name}_triple_data.csv", index=False)
         
 
-create_csvs('json/neo4j_false.json', 'false')
+create_csvs('json/neo4j.json', 'true')
