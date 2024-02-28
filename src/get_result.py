@@ -37,7 +37,7 @@ def get_result(model_info, prompt, model_type):
         for chunk in prompt_chunks:
             # Interact with the Llama model
             print(chunk)
-            response = model(prompt=chunk, max_tokens=256, temperature=0.01,
+            response = model(prompt=chunk, max_tokens=256, temperature=0.8,
                              top_p=0.95, repeat_penalty=1.2, top_k=150, echo=False)
             result_text += response["choices"][0]["text"]
             print(result_text)
