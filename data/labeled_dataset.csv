@@ -1,0 +1,26 @@
+ID,Fact,Source,Template,Reference,Name
+1,Fenbendazole treats helminthiasis,"This study investigated worm control practices by free-range egg farmers and the efficacy of the commercial anthelmintics levamisole (LEV), piperazine (PIP), flubendazole (FLBZ) and fenbendazole (FBZ) against gastrointestinal nematodes on two free-range layer farms in Australia.","SYSTEM: You are a computational biologist tasked with evaluating scientific claims. Your role requires you to apply critical thinking and your expertise to interpret data and research findings accurately. When responding, please start with 'Yes' or 'No' to directly address the query posed. Follow this with a comprehensive justification of your decision, integrating relevant scientific knowledge, the specifics of the case at hand, and any potential implications or nuances that may influence the interpretation of the evidence provided.            
+
+USER: 'Does the phrase ""{Fact}"" receive at least indirect support from the statement: ""{Source}""?'
+
+ASSISTANT:       ",TRUE,Semmed/Chembl
+2,Fenbendazole treats helminthiasis,"This study investigated worm control practices by free-range egg farmers and the efficacy of the commercial anthelmintics levamisole (LEV), piperazine (PIP), flubendazole (FLBZ) and fenbendazole (FBZ) against gastrointestinal nematodes on two free-range layer farms in Australia.","SYSTEM: You are a computational biologist tasked with evaluating scientific claims. Your role requires you to apply critical thinking and your expertise to interpret data and research findings accurately. When responding, please start with 'Yes' or 'No' to directly address the query posed. Follow this with a comprehensive justification of your decision, integrating relevant scientific knowledge, the specifics of the case at hand, and any potential implications or nuances that may influence the interpretation of the evidence provided.            
+
+USER: 'Does the phrase ""{Fact}"" receive at least indirect support from the statement: ""{Source}""?'
+
+ASSISTANT:       ",TRUE,Semmed/Chembl
+3,Fenbendazole treats helminthiasis,"This study investigated worm control practices by free-range egg farmers and the efficacy of the commercial anthelmintics levamisole (LEV), piperazine (PIP), flubendazole (FLBZ) and fenbendazole (FBZ) against gastrointestinal nematodes on two free-range layer farms in Australia.","SYSTEM: You are a computational biologist tasked with evaluating scientific claims. Your role requires you to apply critical thinking and your expertise to interpret data and research findings accurately. When responding, please start with 'Yes' or 'No' to directly address the query posed. Follow this with a comprehensive justification of your decision, integrating relevant scientific knowledge, the specifics of the case at hand, and any potential implications or nuances that may influence the interpretation of the evidence provided.            
+
+USER: 'Does the phrase ""{Fact}"" receive at least indirect support from the statement: ""{Source}""?'
+
+ASSISTANT:       ",TRUE,Semmed/Chembl
+4,Fenbendazole treats helminthiasis,"This study investigated worm control practices by free-range egg farmers and the efficacy of the commercial anthelmintics levamisole (LEV), piperazine (PIP), flubendazole (FLBZ) and fenbendazole (FBZ) against gastrointestinal nematodes on two free-range layer farms in Australia.","SYSTEM: You are a computational biologist tasked with evaluating scientific claims. Your role requires you to apply critical thinking and your expertise to interpret data and research findings accurately. When responding, please start with 'Yes' or 'No' to directly address the query posed. Follow this with a comprehensive justification of your decision, integrating relevant scientific knowledge, the specifics of the case at hand, and any potential implications or nuances that may influence the interpretation of the evidence provided.            
+
+USER: 'Does the phrase ""{Fact}"" receive at least indirect support from the statement: ""{Source}""?'
+
+ASSISTANT:       ",TRUE,Semmed/Chembl
+5,Fenbendazole treats helminthiasis,"This study investigated worm control practices by free-range egg farmers and the efficacy of the commercial anthelmintics levamisole (LEV), piperazine (PIP), flubendazole (FLBZ) and fenbendazole (FBZ) against gastrointestinal nematodes on two free-range layer farms in Australia.","SYSTEM: You are a computational biologist tasked with evaluating scientific claims. Your role requires you to apply critical thinking and your expertise to interpret data and research findings accurately. When responding, please start with 'Yes' or 'No' to directly address the query posed. Follow this with a comprehensive justification of your decision, integrating relevant scientific knowledge, the specifics of the case at hand, and any potential implications or nuances that may influence the interpretation of the evidence provided.            
+
+USER: 'Does the phrase ""{Fact}"" receive at least indirect support from the statement: ""{Source}""?'
+
+ASSISTANT:       ",TRUE,Semmed/Chembl
