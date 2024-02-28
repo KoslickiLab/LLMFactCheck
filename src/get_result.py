@@ -32,12 +32,13 @@ def get_result(model_info, prompt, model_type):
         ASSISTANT:
 
         '''
+        prompt_template='''Чи фраза «Альбендазол лікує стронгілоїдоз» отримує принаймні непряму підтримку з твердження: «Для визначення факторів господаря, які беруть участь у відповіді на лікування, 46 пацієнтів зі стронгілоїдозом лікували альбендазолом, спостерігали протягом 1 року та розділили на дві групи. групи: вилікувані та невилікувані.»?'''
         prompt_chunks = [prompt_template]
         result_text = ""
         for chunk in prompt_chunks:
             # Interact with the Llama model
             print(chunk)
-            response = model(prompt=chunk, max_tokens=256, temperature=0.3,
+            response = model(prompt=chunk, max_tokens=256, temperature=0.1,
                              top_p=0.95, repeat_penalty=1.2, top_k=150, echo=False)
             result_text += response["choices"][0]["text"]
             print(result_text)
