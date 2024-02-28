@@ -72,7 +72,7 @@ def process_triple(model_info, sentence_id, sentence, triple,
         prompt = create_prompt(triple_text, sentence, model_info[1] if use_icl else "")
         result = get_result(model_info, prompt, model_key)
 
-        question = f"Is the triple '{triple_text}' supported by the sentence: '{sentence}'?"
+        question = prompt
         is_correct, answer = process_result(result)
         write_result_to_csv(console_results_writer, predicate_id, triple_text, sentence_id,
                             sentence, is_correct, question, answer.strip() if answer else None)
