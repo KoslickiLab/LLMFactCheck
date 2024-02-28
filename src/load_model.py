@@ -29,7 +29,7 @@ def load_model(model_type, use_icl):
         # Load a Llama model
         model_name = "TheBloke/Mixtral-8x7B-Instruct-v0.1-GGUF"
         model_path = hf_hub_download(repo_id=model_name, filename="mixtral-8x7b-instruct-v0.1.Q5_K_M.gguf")
-        model = Llama(model_path=model_path, n_threads=1, n_batch=1024, n_gpu_layers=15000, n=512, mlock=True)
+        model = Llama(model_path=model_path, n_threads=4, n_batch=1024, n_gpu_layers=150000, n=5120, mlock=True)
         if use_icl:
             return prepare_icl(model, model_type)
         return model
