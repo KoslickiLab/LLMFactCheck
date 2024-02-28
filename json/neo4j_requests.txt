@@ -4,7 +4,7 @@ match p=(n)-[r]-(m) where r.primary_knowledge_source="infores:chembl"
 with n as n, m as m, r as r
 match p3=(n)-[r2]-(m) where r2.primary_knowledge_source="infores:semmeddb"
 AND type(r)=type(r2)
-return p3 limit 500
+return p3 limit 5000
 
 false:
 
@@ -12,6 +12,6 @@ match p=(n)-[r]-(m) where r.primary_knowledge_source="infores:chembl"
 with n as n, m as m, r as r
 match p3=(n)-[r2]-(m) where r2.primary_knowledge_source="infores:semmeddb"
 AND type(r)<>type(r2)
-return p3 limit 500
+return p3 limit 5000
 
-{change causes to treats}
+{mix triples and sentenses}
