@@ -70,7 +70,7 @@ def process_triple(model_info, sentence_id, sentence, triple,
     #time.sleep(5) # Sleep for 3 seconds
     if (triple_sentence_id, predicate_id) not in progress:
         prompt = create_prompt(triple_text, sentence, model_info[1] if use_icl else "")
-        result = get_result(model_info, prompt, model_key)
+        result, prompt= get_result(model_info, prompt, model_key)
 
         question = prompt
         is_correct, answer = process_result(result)

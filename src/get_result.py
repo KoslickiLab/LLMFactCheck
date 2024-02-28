@@ -41,7 +41,7 @@ def get_result(model_info, prompt, model_type):
                              top_p=0.95, repeat_penalty=1.2, top_k=150, echo=True)
             result_text += response["choices"][0]["text"]
             print(result_text)
-        return result_text
+        return result_text, prompt_template
 
     else:
         # If using an OpenAI model
