@@ -20,7 +20,7 @@ def create_csvs(json_path: str, name: str):
                           "OBJECT_CUI", "OBJECT_NAME", "OBJECT_SEMTYPE", "OBJECT_NOVELTY",
                           "Column", "Column", "Column"]
         triple_records = []
-        sentence_id = 1000
+        sentence_id = 5000
         for item in data:
             segments = item['p3']['segments'][0]
 
