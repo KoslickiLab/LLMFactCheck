@@ -1,4 +1,3 @@
-PREDICATION_ID,SENTENCE_ID,PMID,PREDICATE,SUBJECT_CUI,SUBJECT_NAME,SUBJECT_SEMTYPE,SUBJECT_NOVELTY,OBJECT_CUI,OBJECT_NAME,OBJECT_SEMTYPE,OBJECT_NOVELTY,Column,Column,Column
 24413653,5001,,treats,,Fenbendazole,,,,helminthiasis,,,,,
 9783282,5002,,treats,,Thiabendazole,,,,helminthiasis,,,,,
 22678969,5003,,treats,,Albendazole,,,,Infection,,,,,
