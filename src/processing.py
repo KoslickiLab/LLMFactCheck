@@ -52,6 +52,8 @@ def process_data(model_info, model_type, use_icl, triple_data: pd.DataFrame, sen
         sentence_dict[sentence_id].append((sentence_id, predicate_id, triple))
 
     for sentence_id, triples in sentence_dict.items():
+        print(sentence_data['SENTENCE_ID'])
+              
         sentence = sentence_data[sentence_data['SENTENCE_ID'].astype(int) == int(sentence_id)]['SENTENCE'].values[0]
         for triple in triples:
             process_triple(model_info, sentence_id, sentence, triple,
