@@ -79,8 +79,8 @@ def create_csvs(json_path: str, name: str):
                 "Column": None,
                 "Column": None
             })
-            if sentence_id==400: 
-             n=-400
+            if sentence_id==4900: 
+             n=-4900
         labeled_records_df=pd.DataFrame(labeled_records, columns=labeled_columns)
         sentence_df = pd.DataFrame(sentence_records, columns=sentence_columns)
         triple_df = pd.DataFrame(triple_records, columns=triple_columns)
