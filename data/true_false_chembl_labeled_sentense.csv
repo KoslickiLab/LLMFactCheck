@@ -1,3 +1,4 @@
+SENTENCE_ID,PMID,TYPE,NUMBER,SENT_START_INDEX,SENTENCE,SECTION_HEADER,NORMALIZED_SECTION_HEADER,Column,Column
 5001,,,,,"This study investigated worm control practices by free-range egg farmers and the efficacy of the commercial anthelmintics levamisole (LEV), piperazine (PIP), flubendazole (FLBZ) and fenbendazole (FBZ) against gastrointestinal nematodes on two free-range layer farms in Australia.",,,,
 5002,,,,,[The treatment of helminthiasis with thiabendazole].,,,,
 5003,,,,,The control of STH infections is based on preventive chemotherapy using either albendazole or mebendazole.,,,,
