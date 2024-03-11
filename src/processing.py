@@ -20,7 +20,7 @@ def create_prompt(triple_text, sentence, context=""):
         Returns:
             str: The constructed prompt.
     """
-    return f"'Does the phrase \"{triple_text}\" receive at least indirect support from the statement: \"{sentence}\"?"
+    return f"'Is the triple \"{triple_text}\" directly or indirectly supported by the sentence: \"{sentence}\"?"
 
  
 def process_data(model_info, model_type, use_icl, triple_data: pd.DataFrame, sentence_data: pd.DataFrame,
