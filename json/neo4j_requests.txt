@@ -15,3 +15,7 @@ AND type(r)<>type(r2)
 return p3 limit 5000
 
 {mix triples and sentenses}
+
+match p3=(n)-[r]-(m) where r.primary_knowledge_source="infores:semmeddb"
+return p3 limit 10000
+semmed

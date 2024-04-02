@@ -29,6 +29,7 @@ def create_csvs(json_path: str, name: str):
             predicate_data = segments['relationship']['properties']
 
             subject_name = subject_data['name']
+            print(item)
             object_name = object_data['name']
             predicate = predicate_data['predicate'].split('biolink:', 1)[1].replace('_', ' ')
             sentence = eval(predicate_data['publications_info'])
