@@ -43,7 +43,7 @@ def get_result(model_info, prompt, model_type):
                 result_text += response["choices"][0]["text"]
 
             except Exception as error:
-                result_text += error
+                result_text += str(error)
             
             print(result_text)
         return result_text, prompt_template
