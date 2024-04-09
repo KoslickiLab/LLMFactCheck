@@ -25,7 +25,7 @@ def get_result(model_info, prompt, model_type):
             model = model_info
             full_prompt = prompt
         prompt = full_prompt
-        prompt_template=f'''SYSTEM: You are a computational biologist tasked with evaluating scientific claims. Your role requires you to apply critical thinking and your expertise to interpret data and research findings accurately. When responding, please start with 'Yes' or 'No' to directly address the query posed. Follow this with a comprehensive justification of your decision, integrating relevant scientific knowledge, the specifics of the case at hand, and any potential implications or nuances that may influence the interpretation of the evidence provided.           
+        prompt_template=f'''SYSTEM: Try to answer fast. You are a computational biologist tasked with evaluating scientific claims. Your role requires you to apply critical thinking and your expertise to interpret data and research findings accurately. When responding, please start with 'Yes' or 'No' to directly address the query posed. Follow this with a comprehensive justification of your decision, integrating relevant scientific knowledge, the specifics of the case at hand, and any potential implications or nuances that may influence the interpretation of the evidence provided.           
 
         USER: {prompt}
 
