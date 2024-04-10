@@ -25,9 +25,11 @@ def get_result(model_info, prompt, model_type):
             model = model_info
             full_prompt = prompt
         prompt = full_prompt
-        prompt_template=f'''SYSTEM:  You are a computational biologist. Read carefully. Answer yes or no fast.      
-        
-        {prompt}
+        prompt_template=f'''SYSTEM:  You are a computational biologist. Answer yes or no fast.      
+
+        USER: {prompt}
+
+        ASSISTANT:
 
         '''
         prompt_chunks = [prompt_template]
