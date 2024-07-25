@@ -27,7 +27,7 @@ def main() -> None:
         None
     """
     parser = argparse.ArgumentParser(description="Fact-Checking App")
-    parser.add_argument("--model", required=True, choices=['llama', 'gpt_4_0', 'gpt_3_5_turbo'], help="Model to use")
+    parser.add_argument("--model", required=True, choices=['mixtral1','mixtral2','mixtral3','mixtral4','mixtral5','llama', 'gpt_4_0', 'gpt_3_5_turbo'], help="Model to use")
     parser.add_argument("--icl", action='store_true', help="Use In-Context Learning")
     parser.add_argument("--triple_file", required=True, help="Path to the SemMedDB triple file")
     parser.add_argument("--sentence_file", required=True, help="Path to the SemMedDB sentence file")

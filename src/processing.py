@@ -36,6 +36,7 @@ def process_data(model_info, model_type, use_icl, triple_data: pd.DataFrame, sen
 
     # Check filtering logic
     if last_processed:
+        print(triple_data['SENTENCE_ID'])
         triple_data = triple_data[triple_data['SENTENCE_ID'].astype(int) >= int(last_processed[0])]
 
     (console_results_writer, progress_writer, console_results_file,
@@ -53,7 +54,7 @@ def process_data(model_info, model_type, use_icl, triple_data: pd.DataFrame, sen
     
     for sentence_id, triples in sentence_dict.items():
         print(sentence_data['SENTENCE_ID'])
-        print([x for x in sentence_data['SENTENCE_ID'] if not str(x).isdigit()])      
+        print(sentence_id)
         sentence = sentence_data[sentence_data['SENTENCE_ID'].astype(int) == int(sentence_id)]['SENTENCE'].values[0]
         for triple in triples:
             process_triple(model_info, sentence_id, sentence, triple,
