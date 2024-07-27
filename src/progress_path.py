@@ -4,6 +4,10 @@ import os
 PROGRESS_FILES = {
     'llama': os.path.join('result', 'progress', 'llama_progress.csv'),
     'llama_icl': os.path.join('result', 'progress', 'llama_icl_progress.csv'),
+    'mixtral1': os.path.join('result', 'progress', 'mixtral1_progress.csv'),
+    'mixtral1_icl': os.path.join('result', 'progress', 'mixtral1_icl_progress.csv'),
+    'mixtral2': os.path.join('result', 'progress', 'mixtral2_progress.csv'),
+    'mixtral2_icl': os.path.join('result', 'progress', 'mixtral2_icl_progress.csv'),
     'gpt_3_5_turbo': os.path.join('result', 'progress', 'gpt_3_5_turbo_progress.csv'),
     'gpt_3_5_turbo_icl': os.path.join('result', 'progress', 'gpt_3_5_turbo_icl_progress.csv'),
     'gpt_4_0': os.path.join('result', 'progress', 'gpt_4_0_progress.csv'),

@@ -25,11 +25,12 @@ def load_model(model_type, use_icl):
         ValueError: If an unknown model type is provided.
 
     """
-    if model_type == 'llama':
+        
+    if model_type == 'llama' or model_type == 'mixtral1' or model_type == 'mixtral2' or model_type == 'mixtral3' or model_type == 'mixtral4' or model_type == 'mixtral5':
         # Load a Llama model
         model_name = "TheBloke/Mixtral-8x7B-Instruct-v0.1-GGUF"
-        model_path = hf_hub_download(repo_id=model_name, filename="mixtral-8x7b-instruct-v0.1.Q5_K_M.gguf")
-        model = Llama(model_path=model_path, n_threads=1, n_batch=1, n_ctx=2048, n_gpu_layers=150, n=1, mlock=True)
+        model_path = hf_hub_download(repo_id=model_name, filename="mixtral-8x7b-instruct-v0.1.Q2_K.gguf")
+        model = Llama(model_path=model_path, n_threads=1, n_batch=1, n_ctx=1024, n_gpu_layers=1, n=1, mlock=True)
         if use_icl:
             return prepare_icl(model, model_type)
         return model

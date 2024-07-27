@@ -12,7 +12,7 @@ def get_result(model_info, prompt, model_type):
         str: The generated result text.
 
     """
-    if model_type.startswith('llama'):
+    if model_type.startswith('mixtral') or model_type.startswith('llama'):
         # If using a Llama model
 
         if isinstance(model_info, tuple):
@@ -39,7 +39,7 @@ def get_result(model_info, prompt, model_type):
             
             print(chunk)
             try:
-                response = model(prompt=chunk, max_tokens=1024, temperature=0.8,
+                response = model(prompt=chunk, max_tokens=1, temperature=0.8,
                              top_p=0.95, repeat_penalty=1.2, top_k=150, echo=False)
                 result_text += response["choices"][0]["text"]
 
