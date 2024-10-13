@@ -71,14 +71,40 @@ def save_updated_id(id_value):
 
 # Process a triple and sentence using Llama model
 def process_triple(triple, sentence):
-    prompt = f"""
-    SYSTEM: You are a computational biologist tasked with evaluating scientific claims.
-    Your role requires you to apply critical thinking and your expertise to interpret data and research findings accurately.
-    Answer 'Yes' or 'No' to directly address the query posed.
+    prompt=f"""
+        Context: 
+        USER: (''Is the triple "Phase related to Follicle stimulating hormone measurement" directly or indirectly supported by the sentence: "In pre-menopause healthy females, blood was sampled weekly during one menstruation cycle and menstruation phases (follicular, ovulatory, luteal) were determined by FSH/LH levels."?',)
 
-    USER: ('Does the phrase "{triple}" receive at least indirect support from the statement: "{sentence}"?',).
-    ASSISTANT:
-    """
+        ASSISTANT: Yes
+
+        USER: (''Is the triple "Phase related to Sodium measurement" directly or indirectly supported by the sentence: "Based on a biophysical photoreceptor model, the Na(+)- and Ca(2+)-currents and concentration changes were determined from the first transient depolarization phase of the photoreceptor response."?',)
+
+        ASSISTANT:Yes
+
+        USER: (''Is the triple "Phase related to Bronchoalveolar Lavage" directly or indirectly supported by the sentence: "Challenge of the airways of sensitized guinea pigs with aerosolized ovalbumin resulted in an early phase of microvascular protein leakage and a delayed phase of eosinophil accumulation in the airway lumen, as measured using bronchoalveolar lavage (BAL)."?',)
+
+        ASSISTANT: Yes
+
+        USER: (''Does the phrase "Ciprofloxacin related to DNA Gyrase" receive at least indirect support from the statement: "Effect of ranolazine in preventing postoperative atrial fibrillation in patients undergoing coronary revascularization surgery."?',)
+
+        ASSISTANT: No
+
+        USER: (''Does the phrase "Ciprofloxacin related to Crohn disease" receive at least indirect support from the statement: "Recent evidence of beneficial effects of ranolazine (RAN) in type II diabetes motivates interest in the role of the late sodium current (INaL) in glucose-stimulated insulin secretion."?',)
+
+        ASSISTANT: No
+
+        USER: (''Does the phrase "Ciprofloxacin related to endophthalmitis" receive at least indirect support from the statement: "Furthermore, the activated Akt/mTOR signaling pathway induced by AF was further activated by ranolazine."?',)
+
+        ASSISTANT: No
+
+
+        SYSTEM: You are a computational biologist tasked with evaluating scientific claims. Your role requires you to apply critical thinking and your expertise to interpret data and research findings accurately. Answer 'Yes' or 'No' to directly address the query posed.                 
+        
+        USER: ('\'Does the phrase "{triple}" receive at least indirect support from the statement: "{sentence}"?',).
+
+        ASSISTANT:
+
+        """
 
     response = model(prompt=prompt, max_tokens=1, temperature=0, echo=False, logprobs=True)
     return response["choices"][0]["text"], json.dumps(response["choices"][0]["logprobs"])
