@@ -16,3 +16,7 @@ dependencies:
     - llama-cpp-python
     - huggingface-hub
     - openai
+
+
+    # - psycopg2
+    # - python-dotenv
