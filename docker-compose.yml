@@ -1,0 +1,17 @@
+
+version: '3.11'
+
+
+services:
+  db:
+    image: postgres:13.16
+    container_name: biomedical
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    networks:
+      - default
+    ports:
+      - "5433:5432"

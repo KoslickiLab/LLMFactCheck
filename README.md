@@ -38,6 +38,10 @@ To ensure a seamless experience, it's crucial to have GCC installed on your MacO
 
 ## Installation
 
+## Command
+docker-compose up -d
+docker-compose ps 
+
 ### Conda Environment
 
 To run the LLMFactCheck tool, follow these steps to set up the necessary Conda environment. Follow these steps: 🛠️
@@ -66,145 +70,116 @@ To run the LLMFactCheck tool, follow these steps to set up the necessary Conda e
     conda activate myLLMFactCheck
    
 
-6. Create a `config` folder in the root of the project, create the file `key.py` with the following contents:
-OPENAI_API_KEY = 'your-openai-api-key'
+6. Create a `.env` file in the root directory:
+```plaintext
+OPENAI_API_KEY='your-openai-api-key'
+LANGFUSE_PUBLIC_KEY='langfuse_public_key'
+LANGFUSE_SECRET_KEY='langfuse_secret_key' 
+LANGFUSE_HOST='langfuse_host' 
+
+
+DB_USERNAME='db_username'
+DB_PASSWORD='db_password' 
+DB_NAME='db_name' 
+DB_HOST='db_host' 
+DB_PORT='db_port' 
+
+```
 
 # Usage (Run LLMFactCheck) 💡 
 After completing the installation, you can run the LLMFactCheck tool using the following command:
 <!---->
-For LLAMA2 model:
-<!---->
+**ChromaDB Document Creation**
+   Run the following command to initialize and process documents for ChromaDB::
    ```bash
-   python main.py --model llama --triple_file semmed_triple_data.csv --sentence_file semmed_sentence_data.csv
+   python src/load_documents_chromadb.py
    ```
-<!---->
-For LLAMA model with ic:
-<!---->
+
+**Dataset Management & Experiment Runner**
+   The pipeline now automatically checks for an existing dataset and uploads data when necessary:
    ```bash
-   python main.py --model llama --icl --triple_file semmed_triple_data.csv --sentence_file semmed_sentence_data.csv
+   python src/langfuse_main.py
    ```
-<!---->
-For GPT-3.5-turbo model:
-<!---->
-   ```bash
-   python main.py --model gpt_3_5_turbo --triple_file semmed_triple_data.csv --sentence_file semmed_sentence_data.csv
-   ```
-<!---->
-For GPT-3.5-turbo model with icl: 
-<!---->
-   ```bash
-   python main.py --model gpt_3_5_turbo --icl --triple_file semmed_triple_data.csv --sentence_file semmed_sentence_data.csv
-   ```
-<!---->
-For GPT-4_0 model:
-<!---->
-   ```bash
-   python main.py --model gpt_4_0 --triple_file semmed_triple_data.csv --sentence_file semmed_sentence_data.csv
-   ```
-For GPT-4_0 model with icl: 
-<!---->
-   ```bash
-   python main.py --model gpt_4_0 --icl --triple_file semmed_triple_data.csv --sentence_file semmed_sentence_data.csv
-   ```
-<!---->
+
+## Additional Scripts
+
+### processdb.py
+- Manages the database connection and cursor, loads nodes, processes edges, and provides a main entry point.
+- Usage:
+  ```bash
+  python src/processdb.py
+  ```
+
+### kg_data_processor.py
+- Defines a KGDataExtractor class for loading nodes and edges, extracting sentences, and saving processed data.
+- Usage:
+  ```bash
+  python src/kg_data_processor.py
+  ```
+
+### kg_data_extractor.py
+- Similar functionality with a KGDataExtractor class, but includes mapping of equivalent curies, sentence extraction, and saving multiple CSV outputs.
+- Usage:
+  ```bash
+  python src/kg_data_extractor.py
+  ```
+
+### fact_check_processor.py
+- Implements a DBFactChecker class connecting to a database, pulling records in batches, running a language model check, and updating the DB.
+- Usage:
+  ```bash
+  python src/fact_check_processor.py
+  ```
+
+### extract_filtered_data.py
+- Loads and filters knowledge graph data from JSONL files into CSV outputs. Also extracts relevant sentences and modifies the data accordingly.
+- Usage:
+  ```bash
+  python src/extract_filtered_data.py
+  ```
+
 ## Project Structure
 This part of the project follows a well-organized structure for easy navigation and management. 
 Here's a quick overview:
-<!---->
-- **main.py:** Main file that invokes the core logic of all models.
-<!---->
-- **data:** Your data for validation.
-  - `human_labeled_semmed.csv` - human-marked triples with sentences for correctness
-  - `semmed_triple_data.csv` - all the columns you need for a triple from SemMedDB
-  - `semmed_sentence_data.csv` - sentences from SemMedDB
-  - `filtered_triple_data.csv` - only those triples from SemMedDB that match the predicates from the yaml file
-  - `predicate-remap.yml` -  all predicates have been re-mapped (including mapping SemMedDB predicates to Biolink)
-  - `test_df_3_5_turbo_icl` - test part human_data_semmed to determine the accuracy of the model GPT 3.5-turbo (with in-context learning)
-  - `test_df_4_0_icl` - test part human_data_semmed to determine the accuracy of the model GPT 4.0 (with in-context learning)
-  - `test_df_llama_icl` - test part human_data_semmed to determine the accuracy of the LLAMA2 model (with in-context learning)
-<!---->
-- **result:** Results of Semmed predicate validation will be stored here.
-  - **progress:** - Progress of a models
-  - `llama_semmed_result.csv`: results of the LLAMA2 model
-  - `llama_icl_semmed_result.csv`: results of the LLAMA2 model (with in-context learning)
-  - `gpt_3_5_turbo_semmed_result.csv`: results of the GPT-3.5-turbo model 
-  - `gpt_3_5_turbo_icl_semmed_result.csv`: results of the GPT-3.5-turbo model (with in-context learning)
-  - `gpt_4_0_semmed_result.csv`: results of GPT-4.0 model 
-  - `gpt_4_0_icl_semmed_result.csv`: results of GPT-4.0 model 
-<!---->
-- **src:** Contains the main code for working with model and the Semmed database .
-  - `data_processing.py`: File for data processing.
-  - `triple_processing.py`: File for triple processing.
-  - `load_model.py`: This file contains functions related to loading and initializing the language model you're using in your project. It might include setting up the Llama model or OpenAI models with appropriate configurations and API keys.
-  - `get_result.py`: In this file, you can find functions related to obtaining results from the language model. This includes sending prompts to the model, receiving responses, and processing the model's output to extract meaningful information or answers.
-  - `result_writing.py`: File for writing results.
-  - `progress.py` - File to track the progress of predicate validation.
-  - `progress_path.py`: This file related to managing file paths for storing progress information.
-  - `progressing.py`: The purpose of this file is to manage the progression of tasks and processes within the project. 
+
+## 📂 Project Structure
+### **data/**
+- `kg2c-2.8.4-nodes.jsonl` and `kg2c-2.8.4-edges.jsonl`: Source files containing nodes and edges data for ChromaDB.
 
 <!---->
-- **util:** The util directory contains the following subdirectories and files:
-    <!---->
-    - <font color="#663399"> model_accuracy directory</font>
-      
-      This directory is used to calculate the model's accuracy. It uses human-annotated SemMedDB data to verify the model's ptriple accuracy.
-             
-      To see the model's accuracy, follow these steps:
-      Make sure you are at the root of the project and then:
-      <!---->
-      For LLAMA2 model:
-      <!---->
-      ```bash
-      cd util
-      cd model_accuracy
-      python accuracy.py --model llama --test_df_file test_df --result_file semmed_result
-      ```
-      <!---->
-      For LLAMA2 model with ICL:
-      <!---->
-      ```bash
-      cd util
-      cd model_accuracy
-      python accuracy.py --model llama --icl --test_df_file test_df --result_file semmed_result
-      ```
-      <!---->
-      For GPT-3.5.-turbo model:
-      <!---->
-      ```bash
-      cd util
-      cd model_accuracy
-      python accuracy.py --model gpt_3_5_turbo --test_df_file test_df --result_file semmed_result
-      ```
-      <!---->
-      For GPT-3.5.-turbo model with ICL:
-      <!---->
-      ```bash
-      cd util
-      cd model_accuracy
-      python accuracy.py --model gpt_3_5_turbo --icl --test_df_file test_df --result_file semmed_result
-      ```
-      <!---->
-      For GPT-4.0 model:
-      <!---->
-      ```bash
-      cd util
-      cd model_accuracy
-      python accuracy.py --model gpt_4_0 --test_df_file test_df --result_file semmed_result
-      ```
-      <!---->
-      For GPT-4.0 model with ICL:
-      <!---->
-      ```bash
-      cd util
-      cd model_accuracy
-      python accuracy.py --model gpt_4_0 --icl --test_df_file test_df --result_file semmed_result
-      ```
-      <!---->
-      <font color="#663399">You will see a visual representation of the model's accuracy in the form of a pie chart</font>
-      <!---->
 
-    <!---->
-    - chembl directory
+
+### **env/**
+- `LLMFactCheck.yml`: Conda environment configuration file.
+
+### **json/**
+- `local_items_single_3.json`: Local dataset JSON file used for uploading to Langfuse.
+
+
+### **src/**
+1. **`__init__.py`**  
+   - Initializes the `src` module.
+
+2. **`langfuse_config.py`**  
+   - Initializes the Langfuse client for dataset operations.
+
+3. **`langfuse_main.py`**  
+   - Defines the `DatasetManager` class for managing datasets: creating, retrieving, and uploading items to Langfuse.
+
+4. **`load_documents_chromadb.py`**  
+   - Defines the `FileReader` class for reading and processing nodes and edges to create ChromaDB documents.
+
+5. **`load_model.py`**  
+   - Initializes the ChromaDB collection for indexing and querying.
+
+6. **`logger_config.py`**  
+   - Configures logging for the entire project to monitor execution steps and errors.
+
+7. **`retrieval_rag.py`**  
+   - Defines the `ChromaDBQuery` class for querying ChromaDB to retrieve relevant documents for triples.
+
+<!---->
+- chembl directory
            
       This directory contains files for testing the model's performance on the ChEMBL database. 
       It includes the `chembl_triple.py` file, which generates triples.
@@ -225,7 +200,7 @@ Here's a quick overview:
       ```
       You don't have to do this (unless you think it's necessary), because we've already done this work and the result is already in the filtered_triple_data.py file
       <!---->
-<!---->
+
 - **test:** This directory contains tests for the project. Tests help verify if the code functions correctly and identify any errors or issues.
 
     Running Tests:
@@ -239,28 +214,54 @@ Here's a quick overview:
      <!---->
 
   These tests utilize Python's built-in unittest.mock library to mock the file operations and csv.writer methods. This helps isolate the functions from the actual file system and ensure that the tests are repeatable and reliable. By patching the built-in open and csv.writer methods with unittest.mock.patch, we are able to simulate different scenarios and test how our functions react to them. Each test utilizes fixtures and mocks to simulate real data and code behavior. This helps ensure that the tests are reliable and repeatable.
-
-## How It Works
-
-1. **Run the Tool**: Execute the main script, and watch as the tool works its magic.
-
-2. **View Results**: The results of the triple validation process will be stored in the "result". You can review them to identify any issues with the references.
-
-3. **Celebrate**: You've successfully checked triples with LLMFactCheck! 🎉
-
-Feel free to explore the source code in the "src" folder for customization or to understand the inner workings of the tool.
-
-### New Features
-
-- **Support for Multiple Sources**: LLMFactCheck now supports validating triples in various sources, not limited to Semmed. You can easily extend its functionality for different datasets.
-
-- **Console Application**: We've introduced a new console application that allows you to validate triples in different sources using the command line. This provides more flexibility and ease of use, especially in environments where a database connection may not be available.
-Enjoy using LLMFactCheck for all your triple validation needs!
+---
 
 
+## 🛡️ How It Works
 
-## Conclusion
+1. **ChromaDB Initialization**:
+   - Use `load_documents_chromadb.py` to process and index nodes and edges into ChromaDB.
 
-LLMFactCheck simplifies the process of checking triples in various sources. Whether you're a researcher or a data enthusiast, our tool will help you ensure the accuracy and quality of your data. Happy validating!
+2. **Langfuse Pipeline**:
+   - Upload datasets using `langfuse_main.py` and validate triples with the pipeline.
 
-Please do not hesitate to contact us if you have any questions or see that the code needs to be improved.
+3. **Run the Tool**: Execute the main script, and watch as the tool works its magic.
+
+4. **View Results**: The results of the triple validation process will be stored in the "result". You can review them to identify any issues with the references.
+
+5. **Celebrate**: You've successfully checked triples with LLMFactCheck! 🎉
+
+6. **Database Interaction (processdb.py)**:
+   - Manages DB connections, executes batch inserts, and prepares loaded edges and nodes.
+
+7. **KG Data Processing (kg_data_processor.py, kg_data_extractor.py)**:
+   - Extracts, filters, and converts edge/node data into CSVs (with sentence mapping and CURIE resolution).
+
+8. **Fact Checking (fact_check_processor.py)**:
+   - Connects to a DB, retrieves triples/sentences, runs them through a language model, then updates the DB with results.
+
+9. **Filtered Extraction (extract_filtered_data.py)**:
+   - Loads and filters nodes/edges from JSONL, matches them with sentences, and exports multiple CSV outputs.
+---
+
+## 🎉 New Features
+1. **ChromaDB Integration**: Streamlined processes to load, query, and manage ChromaDB documents.
+2. **Langfuse Dataset Management**: Automatic creation and uploading of datasets.
+3. **Modular Design**: Classes and scripts are refactored for clarity and reusability.
+4. **Flexible Pipeline Execution**: Multiple components to process and validate data.
+5. **Support for Multiple Sources**: LLMFactCheck now supports validating triples in various sources, not limited to Semmed. You can easily extend its functionality for different datasets.
+
+6. **Console Application**: We've introduced a new console application that allows you to validate triples in different sources using the command line. This provides more flexibility and ease of use, especially in environments where a database connection may not be available.
+---
+
+
+### Example Command Recap:
+```bash
+# Generate ChromaDB documents
+python src/load_documents_chromadb.py
+
+# Manage Langfuse datasets and run experiments
+python src/langfuse_main.py
+```
+
+Happy Fact-Checking! 🎉
